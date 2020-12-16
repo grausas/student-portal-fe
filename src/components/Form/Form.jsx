@@ -5,6 +5,7 @@ import * as S from "./Form.style";
 
 function Form({ fields, callback, buttonText, titleText }) {
   const [fieldValues, setFieldValues] = useState({});
+
   return (
     <S.FormBox>
       <S.Form
@@ -15,9 +16,11 @@ function Form({ fields, callback, buttonText, titleText }) {
       >
         <S.FormTitle>{titleText}</S.FormTitle>
         {fields.map((field) => (
-          <S.InputWrapper>
+          <S.InputWrapper key={field.name}>
             <InputField
+              inputId={field.name}
               type={field.type}
+              name={field.name}
               labelText={field.labelText}
               placeholder={field.placeholder}
               required={field.required}

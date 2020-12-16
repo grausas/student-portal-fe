@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import { Section, InputField, Button } from "../../components/index";
+import { Section, Form } from "../../components/index";
+import { LoginUser } from "../../utils/FormData";
 
 function signUser(userData, history) {
   fetch("http://localhost:8080/login", {
@@ -15,45 +16,16 @@ function signUser(userData, history) {
 }
 
 function Login() {
-  const [userData, setUserData] = useState({ email: "", password: "" });
   const history = useHistory();
 
   return (
     <Section>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          signUser(userData, history);
-        }}
-      >
-        <InputField
-          name={"email"}
-          inputId={"email"}
-          type={"email"}
-          labelText={"Email"}
-          required={true}
-          minLength={4}
-          maxLength={254}
-          placeholder={"jonas@email.com"}
-          handleChange={(e) =>
-            setUserData({ ...userData, email: e.target.value })
-          }
-        />
-        <InputField
-          type={"password"}
-          name={"password"}
-          inputId={"password"}
-          labelText={"Password"}
-          required={true}
-          minLength={8}
-          maxLength={32}
-          placeholder={"password"}
-          handleChange={(e) =>
-            setUserData({ ...userData, password: e.target.value })
-          }
-        />
-        <Button>Login</Button>
-      </form>
+      <Form
+        callback={(fieldValues) => signUser(fieldValues, history)}
+        fields={LoginUser}
+        titleText="Login"
+        buttonText="Login"
+      />
     </Section>
   );
 }
