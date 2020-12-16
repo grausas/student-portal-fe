@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Section, InputField, Button } from "../../components/index";
 
-function signUser(userData) {
+function signUser(userData, history) {
   fetch("http://localhost:8080/login", {
     method: "POST",
     headers: {
@@ -10,17 +11,19 @@ function signUser(userData) {
     body: JSON.stringify(userData),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then(() => history.push("/"));
 }
 
 function Login() {
   const [userData, setUserData] = useState({ email: "", password: "" });
+  const history = useHistory();
+
   return (
     <Section>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          signUser(userData);
+          signUser(userData, history);
         }}
       >
         <InputField
