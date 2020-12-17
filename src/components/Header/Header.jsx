@@ -1,19 +1,20 @@
 import React from "react";
+import logo from "../../assets/reading.svg";
 import * as S from "./Header.style";
-import { Link } from "react-router-dom";
-import logoImg from "../../assets/logo.png";
+import * as AiIcons from "react-icons/ai";
 
 function Header() {
   return (
-    <S.Header>
-      <Link to="/">
-        <S.Logo src={logoImg} alt="Logo" />
-      </Link>
-      <S.Actions>
-        <S.StyledLink to="/">Home</S.StyledLink>
-        <S.StyledLink to="/about">About</S.StyledLink>
-      </S.Actions>
-    </S.Header>
+    <S.HeaderBlock>
+      <S.LogoBlock>
+        <S.Logo src={logo} alt="" />
+        <span>Student Portal</span>
+      </S.LogoBlock>
+      <S.LogoutBlock>
+        <AiIcons.AiOutlineLogout className="icon" />
+        <span>Logout</span>
+      </S.LogoutBlock>
+    </S.HeaderBlock>
   );
 }
 

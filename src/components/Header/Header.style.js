@@ -1,28 +1,64 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const Header = styled.header`
+export const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  background-color: #0b4f6c;
+  color: #eee;
+  position: fixed;
+  z-index: 1;
+  padding: 0.5em 1em;
+  font-weight: 700;
+  width: 100%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    z-index: 0;
+  }
+  span:last-child {
+    padding-right: 1em;
+  }
 `;
 
 export const Logo = styled.img`
   max-height: 40px;
   max-width: 100%;
+  margin-left: 20px;
+  color: #eee;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
-export const Actions = styled.nav``;
+export const LogoBlock = styled.div`
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #111;
-  text-transform: uppercase;
-  &:hover {
-    text-decoration: underline;
+  span:last-child {
+    padding-right: 0;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
-  &:not(:last-child) {
-    margin-right: 10px;
+  .icon {
+    color: #ccc;
+  }
+`;
+
+export const LogoutBlock = styled.div`
+  display: flex;
+
+  span:last-child {
+    padding-right: 20px;
+    margin-left: 5px;
+  }
+  .icon {
+    color: #eee;
   }
 `;
