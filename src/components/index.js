@@ -8,3 +8,4 @@ export { default as Table } from "./Table/Table";
 export { default as Navigation } from "./Navigation/Navigation";
 export { default as Container } from "./Container/Container";
 export { default as Footer } from "./Footer/Footer";
+export { default as Notification } from "./Notification/Notification";
