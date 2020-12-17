@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GlobalStyle from "./globalStyle";
 
 import { Header, Loading } from "./components";
 
@@ -10,6 +11,7 @@ const LoginLazy = lazy(() => import("./pages/Login/Login"));
 function Routes() {
   return (
     <Router>
+      <GlobalStyle />
       <Header />
       <Suspense fallback={<Loading />}>
         <Switch>
