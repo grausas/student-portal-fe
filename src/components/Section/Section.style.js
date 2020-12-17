@@ -9,6 +9,7 @@ export const Section = styled.section`
 
   @media only screen and (max-width: 768px) {
     margin-left: 0;
+    padding: 1em 0.5em;
   }
 `;
 

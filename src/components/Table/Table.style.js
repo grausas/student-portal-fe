@@ -8,6 +8,10 @@ export const TableBox = styled.div`
   box-sizing: border-box;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 1em 0.5em;
+  }
 `;
 
 export const TableTitle = styled.span`
