@@ -16,8 +16,8 @@ export const NavigationData = [
     icon: <Io5Icons.IoPeople />,
   },
   {
-    title: "Add students",
-    path: "/addstudents",
+    title: "Add Student",
+    path: "/addstudent",
     icon: <AiIcons.AiFillFileAdd />,
   },
   {

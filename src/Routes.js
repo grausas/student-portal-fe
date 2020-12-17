@@ -19,7 +19,7 @@ function Routes() {
           <Switch>
             <Route exact path="/" component={HomeLazy} />
             <Route exact path="/login" component={LoginLazy} />
-            <Route exact path="/about" component={AddStudentLazy} />
+            <Route exact path="/addstudent" component={AddStudentLazy} />
           </Switch>
         </Suspense>
       </Container>

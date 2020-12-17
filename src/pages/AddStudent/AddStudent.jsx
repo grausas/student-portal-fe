@@ -1,8 +1,8 @@
 import React from "react";
 import { Section } from "../../components";
 
-function About() {
-  return <Section fullwidth={true}>This is an about page</Section>;
+function AddStudent() {
+  return <Section>This is add student page</Section>;
 }
 
-export default About;
+export default AddStudent;
