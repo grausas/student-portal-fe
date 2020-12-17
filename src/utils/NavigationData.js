@@ -22,17 +22,17 @@ export const NavigationData = [
   },
   {
     title: "Courses",
-    path: "/about",
+    path: "/courses",
     icon: <IoIcons.IoIosPaper />,
   },
   {
     title: "Add Course",
-    path: "/team",
+    path: "/addcourse",
     icon: <FaIcons.FaAddressBook />,
   },
   {
     title: "Groups",
-    path: "/messages",
+    path: "/groups",
     icon: <FaIcons.FaLayerGroup />,
   },
 ];

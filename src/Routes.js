@@ -5,8 +5,8 @@ import GlobalStyle from "./globalStyle";
 import { Header, Loading, Container, Navigation } from "./components";
 
 const HomeLazy = lazy(() => import("./pages/Home/Home"));
-const AboutLazy = lazy(() => import("./pages/About/About"));
 const LoginLazy = lazy(() => import("./pages/Login/Login"));
+const AddStudentLazy = lazy(() => import("./pages/AddStudent/AddStudent"));
 
 function Routes() {
   return (
@@ -18,8 +18,8 @@ function Routes() {
         <Suspense fallback={<Loading />}>
           <Switch>
             <Route exact path="/" component={HomeLazy} />
-            <Route exact path="/about" component={AboutLazy} />
             <Route exact path="/login" component={LoginLazy} />
+            <Route exact path="/about" component={AddStudentLazy} />
           </Switch>
         </Suspense>
       </Container>
