@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Button } from "../index";
+import { Link } from "react-router-dom";
 
 export const HeaderBlock = styled.div`
   display: flex;
@@ -51,14 +53,15 @@ export const LogoBlock = styled.div`
   }
 `;
 
-export const LogoutBlock = styled.div`
-  display: flex;
+export const StyledLink = styled(Link)`
+  padding-right: 30px;
+  text-decoration: none;
+`;
 
-  span:last-child {
-    padding-right: 20px;
-    margin-left: 5px;
-  }
-  .icon {
-    color: #eee;
+export const LogoutButton = styled(Button)`
+  margin-left: 30px;
+
+  &:hover {
+    background: #01baef;
   }
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../assets/reading.svg";
 import * as S from "./Header.style";
-import * as AiIcons from "react-icons/ai";
 
 function Header() {
   return (
@@ -10,10 +9,9 @@ function Header() {
         <S.Logo src={logo} alt="" />
         <span>Student Portal</span>
       </S.LogoBlock>
-      <S.LogoutBlock>
-        <AiIcons.AiOutlineLogout className="icon" />
-        <span>Logout</span>
-      </S.LogoutBlock>
+      <S.StyledLink>
+        <S.LogoutButton>Logout</S.LogoutButton>
+      </S.StyledLink>
     </S.HeaderBlock>
   );
 }
