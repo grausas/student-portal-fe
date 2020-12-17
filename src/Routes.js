@@ -7,6 +7,7 @@ import { Header, Loading, Container, Navigation, Footer } from "./components";
 const HomeLazy = lazy(() => import("./pages/Home/Home"));
 const LoginLazy = lazy(() => import("./pages/Login/Login"));
 const AddStudentLazy = lazy(() => import("./pages/AddStudent/AddStudent"));
+const StudentsLazy = lazy(() => import("./pages/Students/Students"));
 
 function Routes() {
   return (
@@ -20,6 +21,7 @@ function Routes() {
             <Route exact path="/" component={HomeLazy} />
             <Route exact path="/login" component={LoginLazy} />
             <Route exact path="/addstudent" component={AddStudentLazy} />
+            <Route exact path="/students" component={StudentsLazy} />
           </Switch>
         </Suspense>
       </Container>
