@@ -11,4 +11,10 @@ export const tableStudents = [
       return rowData.surname;
     },
   },
+  {
+    title: "Email",
+    render: (rowData) => {
+      return rowData.email;
+    },
+  },
 ];

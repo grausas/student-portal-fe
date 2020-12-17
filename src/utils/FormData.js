@@ -38,4 +38,13 @@ export const addStudent = [
     maxLEngth: 50,
     placeholder: "Jonaitis",
   },
+  {
+    name: "email",
+    type: "email",
+    labelText: "Email",
+    required: true,
+    minLength: 6,
+    maxLEngth: 256,
+    placeholder: "jonas@mail.lt",
+  },
 ];

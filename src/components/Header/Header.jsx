@@ -9,7 +9,7 @@ function Header() {
         <S.Logo src={logo} alt="" />
         <span>Student Portal</span>
       </S.LogoBlock>
-      <S.StyledLink>
+      <S.StyledLink to="#">
         <S.LogoutButton>Logout</S.LogoutButton>
       </S.StyledLink>
     </S.HeaderBlock>
