@@ -9,6 +9,7 @@ const HomeLazy = lazy(() => import("./pages/Home/Home"));
 const LoginLazy = lazy(() => import("./pages/Login/Login"));
 const AddStudentLazy = lazy(() => import("./pages/AddStudent/AddStudent"));
 const StudentsLazy = lazy(() => import("./pages/Students/Students"));
+const CoursesLazy = lazy(() => import("./pages/Courses/Courses"));
 
 function Routes() {
   const auth = useContext(AuthContext);
@@ -31,6 +32,7 @@ function Routes() {
             <Route exact path="/login" component={LoginLazy} />
             <Route exact path="/addstudent" component={AddStudentLazy} />
             <Route exact path="/students" component={StudentsLazy} />
+            <Route exact path="/courses" component={CoursesLazy} />
           </Switch>
         </Suspense>
       </Container>

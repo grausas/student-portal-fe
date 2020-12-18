@@ -18,3 +18,30 @@ export const tableStudents = [
     },
   },
 ];
+
+export const tableCourse = [
+  {
+    title: "Name",
+    render: (rowData) => {
+      return rowData.name;
+    },
+  },
+  {
+    title: "Description",
+    render: (rowData) => {
+      return rowData.description;
+    },
+  },
+  {
+    title: "Lecturer",
+    render: (rowData) => {
+      return rowData.lecturer_id;
+    },
+  },
+  {
+    title: "Group",
+    render: (rowData) => {
+      return rowData.group_id;
+    },
+  },
+];
