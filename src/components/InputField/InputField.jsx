@@ -50,6 +50,7 @@ function InputField({
         <div>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
           <S.Select
+            id={inputId}
             name={name}
             defaultValue
             required={required}

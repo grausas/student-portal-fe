@@ -3,7 +3,7 @@ import { InputField, Button } from "../index";
 import PropType from "prop-types";
 import * as S from "./Form.style";
 
-function Form({ fields, callback, buttonText, titleText }) {
+function Form({ fields, callback, buttonText, titleText, options }) {
   const [fieldValues, setFieldValues] = useState({});
 
   return (
@@ -26,8 +26,12 @@ function Form({ fields, callback, buttonText, titleText }) {
               required={field.required}
               minLength={field.minLength}
               maxLength={field.maxLength}
+              options={options}
               handleChange={(e) =>
-                setFieldValues({ ...fieldValues, [field.name]: e.target.value })
+                setFieldValues({
+                  ...fieldValues,
+                  [field.name]: e.target.value,
+                })
               }
             />
           </S.InputWrapper>
