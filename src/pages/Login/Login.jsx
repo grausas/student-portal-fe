@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Section, Form, Notification } from "../../components/index";
 import { LoginUser } from "../../utils/FormData";
+import { AuthContext } from "../../contexts/AuthContext";
 
-function signUser(userData, setError, setType, history, error) {
+function signUser(userData, auth, setError, setType, history, error) {
   fetch("http://localhost:8080/login", {
     method: "POST",
     headers: {
@@ -25,6 +26,7 @@ function signUser(userData, setError, setType, history, error) {
       if (error) {
         setError(data.msg || "Error!");
       } else {
+        auth.setToken(data.token);
         history.push("/");
       }
     })
@@ -35,6 +37,7 @@ function signUser(userData, setError, setType, history, error) {
 }
 
 function Login() {
+  const auth = useContext(AuthContext);
   const history = useHistory();
   const [error, setError] = useState();
   const [type, setType] = useState();
@@ -44,7 +47,7 @@ function Login() {
       {error && <Notification type={type}>{error}</Notification>}
       <Form
         callback={(fieldValues) =>
-          signUser(fieldValues, setError, setType, history)
+          signUser(fieldValues, auth, setError, setType, history)
         }
         fields={LoginUser}
         titleText="Login"
