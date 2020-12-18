@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
+import * as S from "./Login.style";
 import { useHistory } from "react-router-dom";
-import { Section, Form, Notification } from "../../components/index";
+import { Form, Notification } from "../../components/index";
 import { LoginUser } from "../../utils/FormData";
 import { AuthContext } from "../../contexts/AuthContext";
 
@@ -43,7 +44,7 @@ function Login() {
   const [type, setType] = useState();
 
   return (
-    <Section>
+    <S.LoginBlock>
       {error && <Notification type={type}>{error}</Notification>}
       <Form
         callback={(fieldValues) =>
@@ -53,7 +54,7 @@ function Login() {
         titleText="Login"
         buttonText="Login"
       />
-    </Section>
+    </S.LoginBlock>
   );
 }
 

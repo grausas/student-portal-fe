@@ -2,12 +2,14 @@ import React from "react";
 import * as S from "./Navigation.style";
 import Burger from "./NavigationBurger/Burger";
 
-function Navigation() {
+function Navigation({ isLoggedIn }) {
   return (
     <>
-      <S.Navigation>
-        <Burger />
-      </S.Navigation>
+      {isLoggedIn && (
+        <S.Navigation>
+          <Burger />
+        </S.Navigation>
+      )}
     </>
   );
 }
