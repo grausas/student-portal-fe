@@ -35,13 +35,27 @@ export const tableCourse = [
   {
     title: "Lecturer",
     render: (rowData) => {
-      return rowData.lecturer_id;
+      return rowData.name + " " + rowData.surname;
     },
   },
   {
     title: "Group",
     render: (rowData) => {
-      return rowData.group_id;
+      return rowData.id;
+    },
+  },
+];
+export const tableGroup = [
+  {
+    title: "Group",
+    render: (rowData) => {
+      return rowData.id;
+    },
+  },
+  {
+    title: "Student",
+    render: (rowData) => {
+      return rowData.name + " " + rowData.surname;
     },
   },
 ];
