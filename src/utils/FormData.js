@@ -48,3 +48,47 @@ export const addStudent = [
     placeholder: "jonas@mail.lt",
   },
 ];
+export const addGroup = [
+  {
+    name: "groupId",
+    type: "number",
+    labelText: "Group",
+    required: true,
+    placeholder: "Enter group number",
+  },
+  {
+    name: "studentId",
+    type: "dropdown",
+    labelText: "Student",
+    required: true,
+  },
+];
+export const addCourse = [
+  {
+    name: "name",
+    type: "text",
+    labelText: "Name",
+    required: true,
+    placeholder: "name",
+  },
+  {
+    name: "description",
+    type: "text",
+    labelText: "Description",
+    required: true,
+
+    placeholder: "front edn...",
+  },
+  {
+    name: "lecturerId",
+    type: "dropdown",
+    labelText: "Lecturer",
+    required: true,
+  },
+  {
+    name: "groupId",
+    type: "dropdown",
+    labelText: "Group",
+    required: true,
+  },
+];
