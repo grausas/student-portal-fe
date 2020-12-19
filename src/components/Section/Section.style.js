@@ -6,6 +6,7 @@ export const Section = styled.section`
   padding: 2em 1.5em;
   margin-left: 200px;
   margin-top: 60px;
+  margin-bottom: 60px;
 
   @media only screen and (max-width: 768px) {
     margin-left: 0;

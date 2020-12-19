@@ -6,7 +6,7 @@ import {
   Form,
   Notification,
 } from "../../components/index";
-import * as S from "./AddStudent.style";
+import * as S from "./Groups.style";
 import { tableGroup } from "../../utils/TableData";
 import { addGroup } from "../../utils/FormData";
 
@@ -21,9 +21,6 @@ function addGroupData(data, setError, setType, setGroups, groups, error) {
     .then((res) => {
       if (!res.ok) {
         error = true;
-        // } else {
-        //   const newItem = { id: new Date().getTime().toString(), title: groupname };
-        //   setGroups(...groups, newItem);
         error = false;
       }
       return res.json();
