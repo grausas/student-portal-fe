@@ -61,7 +61,7 @@ export const tableCourse = [
     },
   },
   {
-    title: "Group",
+    title: "Group Students",
     render: (rowData) => {
       return rowData.group;
     },

@@ -11,6 +11,22 @@ function Students() {
     setSearchTerm(event.target.value);
   };
 
+  const handleSort = (event) => {
+    const sortIndex = event.target.id;
+
+    const sortedData = students.slice().sort((a, b) => {
+      if (sortIndex === "0") {
+        return a.name.localeCompare(b.name);
+      }
+      if (sortIndex === "1") {
+        console.log(a.surname, b.surname);
+        return a.surname.localeCompare(b.surname);
+      }
+      return 0;
+    });
+    setStudents(sortedData);
+  };
+
   const results = !searchTerm
     ? students
     : students.filter(
@@ -68,6 +84,7 @@ function Students() {
         />
       </S.InputWrapper>
       <Table
+        handleClick={handleSort}
         cols={tableStudents(handleDelete)}
         data={results}
         tableTitle="Students"
