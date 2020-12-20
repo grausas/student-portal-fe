@@ -98,7 +98,6 @@ function Students() {
         </S.FormWrapper>
         <h2>Groups</h2>
         <Table cols={tableGroup} data={groups} tableTitle="Groups" />
-        <InputField type="dropdown" labelText="Select group" options={groups} />
       </Section>
     </>
   );
