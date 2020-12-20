@@ -1,12 +1,15 @@
 import React from "react";
 import { Section } from "../../components";
+import * as S from "./Home.style";
 
 function Home() {
   return (
     <>
-      <Section background="e3e3e3">
-        Welcome to your React boilerplate. We hope that this will bring you up
-        to speed with your development
+      <Section>
+        <S.TextBlock>
+          <h1>Welcome to students portal</h1>
+          <span>Here you can....</span>
+        </S.TextBlock>
       </Section>
     </>
   );
