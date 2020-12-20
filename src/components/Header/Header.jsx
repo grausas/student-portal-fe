@@ -7,7 +7,7 @@ function Header({ isLoggedIn, logOut }) {
     <S.HeaderBlock>
       <S.LogoBlock>
         <S.Logo src={logo} alt="" />
-        <span>Student Portal</span>
+        <span>students portal</span>
       </S.LogoBlock>
       {isLoggedIn && (
         <S.StyledLink onClick={logOut} to="/login">
