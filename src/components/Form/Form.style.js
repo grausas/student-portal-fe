@@ -7,7 +7,8 @@ export const FormBox = styled.div`
   border-radius: 5px;
   margin: 2em 0 2em 0;
   box-sizing: border-box;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 `;
 
 export const Form = styled.form`

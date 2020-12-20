@@ -30,7 +30,7 @@ function Routes() {
         <Navigation isLoggedIn={!!auth.token} />
         <Suspense fallback={<Loading />}>
           <Switch>
-            <Route exact path="/" component={HomeLazy} />
+            <Route exact path="/home" component={HomeLazy} />
             <Route exact path="/login" component={LoginLazy} />
             <Route exact path="/addstudent" component={AddStudentLazy} />
             <Route exact path="/addcourse" component={AddCourseLazy} />

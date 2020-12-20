@@ -7,7 +7,7 @@ import * as Io5Icons from "react-icons/io5";
 export const NavigationData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <AiIcons.AiFillHome />,
   },
   {

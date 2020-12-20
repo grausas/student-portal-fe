@@ -8,7 +8,11 @@ function Menu({ open, handleClose }) {
       {NavigationData.map((item, index) => {
         return (
           <li key={index}>
-            <S.StyledLink to={item.path} onClick={handleClose}>
+            <S.StyledLink
+              activeStyle={{ background: "#0b4f6c", color: "#fff" }}
+              to={item.path}
+              onClick={handleClose}
+            >
               <S.IconBlock>{item.icon}</S.IconBlock>
               <span>{item.title}</span>
             </S.StyledLink>

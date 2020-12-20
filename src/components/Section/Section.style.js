@@ -7,8 +7,6 @@ export const Section = styled.section`
   margin-left: 200px;
   margin-top: 60px;
   margin-bottom: 60px;
-  background: #eef5f9;
-  height: 100%;
   @media only screen and (max-width: 768px) {
     margin-left: 0;
     padding: 1em 0.5em;
