@@ -65,7 +65,7 @@ export const addGroup = [
 ];
 export const addCourse = [
   {
-    name: "name",
+    name: "courseName",
     type: "text",
     labelText: "Name",
     required: true,
@@ -76,8 +76,7 @@ export const addCourse = [
     type: "text",
     labelText: "Description",
     required: true,
-
-    placeholder: "front edn...",
+    placeholder: "course description...",
   },
   {
     name: "lecturerId",

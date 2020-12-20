@@ -57,13 +57,13 @@ export const tableCourse = [
   {
     title: "Lecturer",
     render: (rowData) => {
-      return rowData.name + " " + rowData.surname;
+      return rowData.lecturer;
     },
   },
   {
     title: "Group",
     render: (rowData) => {
-      return rowData.groupId;
+      return rowData.group;
     },
   },
 ];
