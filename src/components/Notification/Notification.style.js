@@ -5,6 +5,7 @@ export const NotificationText = styled.h3`
   background-color: #292f38;
   text-align: center;
   margin: 0;
+  margin-bottom: 1em;
   border-radius: 10px;
-  padding: 1em 0.5em;
+  padding: 0.5em;
 `;

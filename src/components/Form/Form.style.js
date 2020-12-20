@@ -5,7 +5,7 @@ export const FormBox = styled.div`
   padding: 2em 4em;
   background-color: #292f38;
   border-radius: 5px;
-  margin: 2em 0 6em 0;
+  margin: 2em 0 2em 0;
   box-sizing: border-box;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 `;
