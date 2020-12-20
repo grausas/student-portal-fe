@@ -14,6 +14,20 @@ function InputField({
   options,
 }) {
   switch (type) {
+    case "longtext":
+      return (
+        <div>
+          <S.Label htmlFor={inputId}>{labelText}</S.Label>
+          <S.TextArea
+            id={inputId}
+            placeholder={placeholder}
+            onChange={handleChange}
+            minLength={minLength}
+            maxLength={maxLength}
+            required={required}
+          ></S.TextArea>
+        </div>
+      );
     case "email":
       return (
         <div>

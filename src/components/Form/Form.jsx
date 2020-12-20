@@ -20,6 +20,7 @@ function Form({ fields, callback, buttonText, titleText, options }) {
             <InputField
               inputId={field.name}
               type={field.type}
+              key={field.name}
               name={field.name}
               labelText={field.labelText}
               placeholder={field.placeholder}
