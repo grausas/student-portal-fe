@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Section, Table } from "../../components/index";
+import { Section, Table, InputField } from "../../components/index";
 import { tableStudents } from "../../utils/TableData";
+import * as S from "./Students.style";
 
 function Students() {
   const [students, setStudents] = useState();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const results = !searchTerm
+    ? students
+    : students.filter(
+        (person) =>
+          person.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+          person.surname.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+      );
 
   const handleDelete = (item) => () => {
     const itemId = item.id;
@@ -21,6 +35,7 @@ function Students() {
         }
       });
   };
+
   useEffect(() => {
     fetch("http://localhost:8080/view-students")
       .then((res) => res.json())
@@ -30,9 +45,18 @@ function Students() {
   return (
     <Section>
       <h2>Students</h2>
+      <S.InputWrapper>
+        <InputField
+          type="text"
+          labelText="Search Student:"
+          placeholder="search..."
+          value={searchTerm}
+          handleChange={handleSearch}
+        />
+      </S.InputWrapper>
       <Table
         cols={tableStudents(handleDelete)}
-        data={students}
+        data={results}
         tableTitle="Students"
       />
     </Section>
