@@ -39,7 +39,20 @@ function Students() {
   useEffect(() => {
     fetch("http://localhost:8080/view-students")
       .then((res) => res.json())
-      .then((data) => setStudents(data));
+      .then((data) =>
+        setStudents(
+          data.map((item) => {
+            return {
+              id: item.id,
+              value: item.id,
+              text: item.name,
+              name: item.name,
+              surname: item.surname,
+              email: item.email,
+            };
+          })
+        )
+      );
   }, []);
 
   return (

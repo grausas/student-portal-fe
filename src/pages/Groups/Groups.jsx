@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
-import {
-  Section,
-  Table,
-  InputField,
-  Form,
-  Notification,
-} from "../../components/index";
+import React, { useEffect, useState, useContext } from "react";
+import { Section, Table, Form, Notification } from "../../components/index";
 import * as S from "./Groups.style";
+import { AuthContext } from "../../contexts/AuthContext";
 import { tableGroup } from "../../utils/TableData";
 import { addGroup } from "../../utils/FormData";
 
-function addGroupData(data, setError, setType, setGroups, groups, error) {
+function addGroupData(data, auth, setError, setType, setGroups, groups, error) {
   fetch("http://localhost:8080/groups", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${auth.token}`,
     },
     body: JSON.stringify(data),
   })
@@ -31,8 +27,7 @@ function addGroupData(data, setError, setType, setGroups, groups, error) {
         setError(data.msg);
       } else {
         setType("");
-
-        console.log("hello");
+        setError(data.msg);
       }
     })
     .catch((err) => {
@@ -41,6 +36,7 @@ function addGroupData(data, setError, setType, setGroups, groups, error) {
     });
 }
 function Students() {
+  const auth = useContext(AuthContext);
   const [groups, setGroups] = useState();
   const [error, setError] = useState();
   const [type, setType] = useState();
@@ -88,7 +84,7 @@ function Students() {
         <S.FormWrapper>
           <Form
             callback={(fieldValues) => {
-              addGroupData(fieldValues, setError, setType);
+              addGroupData(fieldValues, auth, setError, setType);
             }}
             options={students}
             fields={addGroup}
