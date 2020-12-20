@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Section, Table } from "../../components/index";
+import { Section, Table, InputField } from "../../components/index";
 import { tableCourse } from "../../utils/TableData";
+import * as S from "./Courses.style";
 
 function Students() {
   const [courses, setCourses] = useState();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event) => {
+    setSearchTerm(Number(event.target.value));
+  };
+
+  const results = !searchTerm
+    ? courses
+    : courses.filter((course) => course.id === searchTerm);
 
   useEffect(() => {
     fetch("http://localhost:8080/view-courses")
@@ -14,6 +24,7 @@ function Students() {
             return {
               id: item.id,
               value: item.id,
+              text: item.course_name,
               name: item.course_name,
               description: item.description,
               lecturer: item.lecturer,
@@ -26,7 +37,16 @@ function Students() {
   return (
     <Section>
       <h2>Courses</h2>
-      <Table cols={tableCourse} data={courses} tableTitle="Courses" />
+      <S.InputWrapper>
+        <InputField
+          type="dropdown"
+          labelText="Filter Course:"
+          value={searchTerm}
+          options={courses}
+          handleChange={handleSearch}
+        />
+      </S.InputWrapper>
+      <Table cols={tableCourse} data={results} tableTitle="Courses" />
     </Section>
   );
 }
