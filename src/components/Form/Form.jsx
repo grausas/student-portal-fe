@@ -31,7 +31,7 @@ function Form({ fields, callback, buttonText, titleText, options }) {
               handleChange={(e) =>
                 setFieldValues({
                   ...fieldValues,
-                  [field.name]: e.target.value,
+                  [field.name]: e.target.value.split(" ").join(""),
                 })
               }
             />

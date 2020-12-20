@@ -95,27 +95,33 @@ function AddCourse() {
         >
           <S.InputWrapper>
             <InputField
-              labelText="Name"
+              labelText="Course Name:"
               type="text"
               placeholder="course name"
               handleChange={(e) =>
-                setData({ ...data, courseName: e.target.value })
+                setData({
+                  ...data,
+                  courseName: e.target.value.split(" ").join(""),
+                })
               }
             />
           </S.InputWrapper>
           <S.InputWrapper>
             <InputField
-              labelText="Description"
+              labelText="Description:"
               type="text"
               placeholder="course description"
               handleChange={(e) =>
-                setData({ ...data, description: e.target.value })
+                setData({
+                  ...data,
+                  description: e.target.value.split(" ").join(""),
+                })
               }
             />
           </S.InputWrapper>
           <S.InputWrapper>
             <InputField
-              labelText="Lecturer"
+              labelText="Lecturer:"
               type="dropdown"
               options={lecturer}
               handleChange={(e) =>
@@ -125,7 +131,7 @@ function AddCourse() {
           </S.InputWrapper>
           <S.InputWrapper>
             <InputField
-              labelText="Group"
+              labelText="Group:"
               type="dropdown"
               options={groups}
               handleChange={(e) =>

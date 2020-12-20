@@ -2,7 +2,7 @@ export const LoginUser = [
   {
     name: "email",
     type: "email",
-    labelText: "Email",
+    labelText: "Email:",
     required: true,
     minLength: 6,
     maxLEngth: 256,
@@ -11,7 +11,7 @@ export const LoginUser = [
   {
     name: "password",
     type: "password",
-    labelText: "Password",
+    labelText: "Password:",
     required: true,
     minLength: 8,
     maxLength: 64,
@@ -23,7 +23,7 @@ export const addStudent = [
   {
     name: "name",
     type: "text",
-    labelText: "Name",
+    labelText: "Name:",
     required: true,
     minLength: 2,
     maxLength: 50,
@@ -32,7 +32,7 @@ export const addStudent = [
   {
     name: "surname",
     type: "text",
-    labelText: "Surname",
+    labelText: "Surname:",
     required: true,
     minLength: 2,
     maxLEngth: 50,
@@ -41,7 +41,7 @@ export const addStudent = [
   {
     name: "email",
     type: "email",
-    labelText: "Email",
+    labelText: "Email:",
     required: true,
     minLength: 6,
     maxLEngth: 256,
@@ -52,42 +52,14 @@ export const addGroup = [
   {
     name: "groupId",
     type: "number",
-    labelText: "Group",
+    labelText: "Group Name:",
     required: true,
     placeholder: "Enter group number",
   },
   {
     name: "studentId",
     type: "dropdown",
-    labelText: "Student",
-    required: true,
-  },
-];
-export const addCourse = [
-  {
-    name: "courseName",
-    type: "text",
-    labelText: "Name",
-    required: true,
-    placeholder: "name",
-  },
-  {
-    name: "description",
-    type: "text",
-    labelText: "Description",
-    required: true,
-    placeholder: "course description...",
-  },
-  {
-    name: "lecturerId",
-    type: "dropdown",
-    labelText: "Lecturer",
-    required: true,
-  },
-  {
-    name: "groupId",
-    type: "dropdown",
-    labelText: "Group",
+    labelText: "Student:",
     required: true,
   },
 ];

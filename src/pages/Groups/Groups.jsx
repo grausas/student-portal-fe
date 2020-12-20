@@ -5,7 +5,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { tableGroup } from "../../utils/TableData";
 import { addGroup } from "../../utils/FormData";
 
-function addGroupData(data, auth, setError, setType, setGroups, groups, error) {
+function addGroupData(data, auth, setError, setType, error) {
   fetch("http://localhost:8080/groups", {
     method: "POST",
     headers: {
