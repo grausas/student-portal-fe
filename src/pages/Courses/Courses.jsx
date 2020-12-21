@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Section, Table, InputField } from "../../components/index";
 import { tableCourse } from "../../utils/TableData";
+import { AuthContext } from "../../contexts/AuthContext";
 import * as S from "./Courses.style";
 
-function Students() {
+function Courses() {
+  const auth = useContext(AuthContext);
   const [courses, setCourses] = useState();
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -16,7 +18,11 @@ function Students() {
     : courses.filter((course) => course.id === searchTerm);
 
   useEffect(() => {
-    fetch("http://localhost:8080/view-courses")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-courses`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) =>
         setCourses(
@@ -33,7 +39,7 @@ function Students() {
           })
         )
       );
-  }, []);
+  }, [auth.token]);
   return (
     <Section>
       <h2>Courses</h2>
@@ -51,4 +57,4 @@ function Students() {
   );
 }
 
-export default Students;
+export default Courses;

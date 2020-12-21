@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Section, Table, InputField } from "../../components/index";
 import { tableStudents } from "../../utils/TableData";
 import * as S from "./Students.style";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Students() {
+  const auth = useContext(AuthContext);
   const [students, setStudents] = useState();
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -37,11 +39,13 @@ function Students() {
 
   const handleDelete = (item) => () => {
     const itemId = item.id;
-    window.confirm("Do you want to delete this item?") &&
-      fetch(`http://localhost:8080/delete/${itemId}`, {
+    const studentName = item.name + " " + item.surname;
+    window.confirm(`Do you want to delete student: ${studentName}`) &&
+      fetch(`${process.env.REACT_APP_SERVER_URL}/delete/${itemId}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
+          Authorization: `Bearer ${auth.token}`,
         },
       }).then((response) => {
         if (!response.ok) {
@@ -53,7 +57,11 @@ function Students() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/view-students")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-students`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) =>
         setStudents(
@@ -69,7 +77,7 @@ function Students() {
           })
         )
       );
-  }, []);
+  }, [auth.token]);
 
   return (
     <Section>

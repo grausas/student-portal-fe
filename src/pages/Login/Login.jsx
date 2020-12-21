@@ -6,7 +6,7 @@ import { LoginUser } from "../../utils/FormData";
 import { AuthContext } from "../../contexts/AuthContext";
 
 function signUser(userData, auth, setError, setType, history, error) {
-  fetch("http://localhost:8080/login", {
+  fetch(`${process.env.REACT_APP_SERVER_URL}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,7 +28,7 @@ function signUser(userData, auth, setError, setType, history, error) {
         setError(data.msg || "Error!");
       } else {
         auth.setToken(data.token);
-        history.push("/");
+        history.push("/home");
       }
     })
     .catch((err) => {

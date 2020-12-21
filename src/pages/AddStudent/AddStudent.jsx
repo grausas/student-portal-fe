@@ -6,7 +6,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 function addStudentData(data, auth, setError, setType, error) {
   const studentName = data.name + " " + data.surname;
-  fetch("http://localhost:8080/students", {
+  fetch(`${process.env.REACT_APP_SERVER_URL}/students`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

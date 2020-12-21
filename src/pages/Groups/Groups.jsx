@@ -6,7 +6,7 @@ import { tableGroup } from "../../utils/TableData";
 import { addGroup } from "../../utils/FormData";
 
 function addGroupData(data, auth, setError, setType, error) {
-  fetch("http://localhost:8080/groups", {
+  fetch(`${process.env.REACT_APP_SERVER_URL}/groups`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function Students() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/view-groups")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-groups`)
       .then((res) => res.json())
       .then((data) => {
         setGroups(
@@ -61,7 +61,7 @@ function Students() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:8080/view-students")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-students`)
       .then((res) => res.json())
       .then((data) =>
         setStudents(

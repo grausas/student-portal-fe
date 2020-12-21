@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Section, Button, Notification, InputField } from "../../components";
 import * as S from "./AddCourse.style";
-// import { addCourse } from "../../utils/FormData";
+import { AuthContext } from "../../contexts/AuthContext";
 
-function addCourseData(data, setError, setType, error) {
+function addCourseData(data, auth, setError, setType, error) {
   console.log(data);
-  fetch("http://localhost:8080/courses", {
+  fetch(`${process.env.REACT_APP_SERVER_URL}/courses`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${auth.token}`,
     },
     body: JSON.stringify(data),
   })
@@ -36,6 +37,7 @@ function addCourseData(data, setError, setType, error) {
 }
 
 function AddCourse() {
+  const auth = useContext(AuthContext);
   const [error, setError] = useState();
   const [type, setType] = useState();
   const [data, setData] = useState({
@@ -49,7 +51,11 @@ function AddCourse() {
   const [groups, setGroups] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/view-lecturers")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-lecturers`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) =>
         setLecturer(
@@ -64,9 +70,13 @@ function AddCourse() {
           })
         )
       );
-  }, []);
+  }, [auth.token]);
   useEffect(() => {
-    fetch("http://localhost:8080/view-groups")
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-groups`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) =>
         setGroups(
@@ -79,7 +89,7 @@ function AddCourse() {
           })
         )
       );
-  }, []);
+  }, [auth.token]);
 
   return (
     <Section>
@@ -90,7 +100,7 @@ function AddCourse() {
         <S.Form
           onSubmit={(e) => {
             e.preventDefault();
-            addCourseData(data, setError, setType);
+            addCourseData(data, auth, setError, setType);
           }}
         >
           <S.InputWrapper>
