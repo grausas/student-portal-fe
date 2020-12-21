@@ -1,8 +1,20 @@
 import React, { Suspense, lazy, useContext } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import GlobalStyle from "./globalStyle";
 
-import { Header, Loading, Container, Navigation, Footer } from "./components";
+import {
+  Header,
+  Loading,
+  Container,
+  Navigation,
+  Footer,
+  PrivateRoute,
+} from "./components";
 import { AuthContext } from "./contexts/AuthContext";
 
 const HomeLazy = lazy(() => import("./pages/Home/Home"));
@@ -30,13 +42,16 @@ function Routes() {
         <Navigation isLoggedIn={!!auth.token} />
         <Suspense fallback={<Loading />}>
           <Switch>
-            <Route exact path="/home" component={HomeLazy} />
+            <Route exact path="/">
+              <Redirect to="/login" />
+            </Route>
             <Route exact path="/login" component={LoginLazy} />
-            <Route exact path="/addstudent" component={AddStudentLazy} />
-            <Route exact path="/addcourse" component={AddCourseLazy} />
-            <Route exact path="/students" component={StudentsLazy} />
-            <Route exact path="/courses" component={CoursesLazy} />
-            <Route exact path="/groups" component={GroupLazy} />
+            <PrivateRoute exact path="/home" component={HomeLazy} />
+            <PrivateRoute exact path="/addstudent" component={AddStudentLazy} />
+            <PrivateRoute exact path="/addcourse" component={AddCourseLazy} />
+            <PrivateRoute exact path="/students" component={StudentsLazy} />
+            <PrivateRoute exact path="/courses" component={CoursesLazy} />
+            <PrivateRoute exact path="/groups" component={GroupLazy} />
           </Switch>
         </Suspense>
       </Container>
