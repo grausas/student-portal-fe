@@ -56,6 +56,10 @@ export const LogoBlock = styled.div`
 export const StyledLink = styled(Link)`
   padding-right: 30px;
   text-decoration: none;
+
+  @media only screen and (max-width: 768px) {
+    padding-right: 10px;
+  }
 `;
 
 export const LogoutButton = styled(Button)`

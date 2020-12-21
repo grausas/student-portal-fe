@@ -4,7 +4,6 @@ import * as S from "./AddCourse.style";
 import { AuthContext } from "../../contexts/AuthContext";
 
 function addCourseData(data, auth, setError, setType, error) {
-  console.log(data);
   fetch(`${process.env.REACT_APP_SERVER_URL}/courses`, {
     method: "POST",
     headers: {

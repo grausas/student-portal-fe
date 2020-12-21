@@ -21,7 +21,6 @@ function Students() {
         return a.name.localeCompare(b.name);
       }
       if (sortIndex === "1") {
-        console.log(a.surname, b.surname);
         return a.surname.localeCompare(b.surname);
       }
       return 0;

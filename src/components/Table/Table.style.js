@@ -10,7 +10,8 @@ export const TableBox = styled.div`
   text-align: center;
 
   @media only screen and (max-width: 768px) {
-    padding: 1em 0.5em;
+    padding: 1em 0.3em;
+    font-size: 0.8em;
   }
 `;
 
@@ -36,11 +37,17 @@ export const Table = styled.table`
   th {
     padding: 10px;
     text-align: left;
+    @media only screen and (max-width: 768px) {
+      padding: 10px 2px;
+    }
   }
 
   td {
     padding: 10px;
     border-bottom: 1px solid #eee;
     text-transform: capitalize;
+    @media only screen and (max-width: 768px) {
+      padding: 10px 2px;
+    }
   }
 `;
