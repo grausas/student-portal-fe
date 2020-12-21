@@ -43,7 +43,11 @@ function Students() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/view-groups`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-groups`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setGroups(
@@ -58,10 +62,14 @@ function Students() {
           })
         );
       });
-  }, []);
+  }, [auth.token]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/view-students`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/view-students`, {
+      headers: {
+        Authorization: `Bearer ${auth.token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) =>
         setStudents(
@@ -74,7 +82,7 @@ function Students() {
           })
         )
       );
-  }, []);
+  }, [auth.token]);
 
   return (
     <>
