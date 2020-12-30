@@ -10,10 +10,10 @@ const theme = {
     },
   },
   secondary: {
-    background: "#eeeeee",
-    color: "#222222",
+    background: "#01baef",
+    color: "#fff",
     hover: {
-      background: "#e8e8e8",
+      background: "#111",
     },
     focus: {
       background: "#e3e3e3",

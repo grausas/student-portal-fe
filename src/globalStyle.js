@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import logo from "./assets/background.jpg";
 
 const GlobalStyle = createGlobalStyle`
    * {
@@ -8,7 +9,10 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
    }
    body {
-        background: #eef5f9;
+      background-image: url(${logo});
+      background-size: cover;
+      background-repeat: no-repeat;
+        /* background: #eef5f9; */
    }
 `;
 
