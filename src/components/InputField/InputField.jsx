@@ -1,5 +1,7 @@
 import React from "react";
 import * as S from "./InputField.style";
+import * as AiIcons from "react-icons/ai";
+import * as MdIcons from "react-icons/md";
 
 function InputField({
   type,
@@ -32,31 +34,42 @@ function InputField({
       return (
         <div>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
-          <S.Input
-            type="email"
-            name={name}
-            id={inputId}
-            placeholder={placeholder}
-            minLength={minLength}
-            maxLength={maxLength}
-            required={required}
-            onChange={handleChange}
-          />
+          <S.InputDiv>
+            <MdIcons.MdEmail
+              style={{
+                fontSize: "1.5em",
+                color: "#666",
+              }}
+            />
+            <S.Input
+              type="email"
+              name={name}
+              id={inputId}
+              placeholder={placeholder}
+              minLength={minLength}
+              maxLength={maxLength}
+              required={required}
+              onChange={handleChange}
+            />
+          </S.InputDiv>
         </div>
       );
     case "password":
       return (
         <div>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
-          <S.Input
-            type="password"
-            name={name}
-            placeholder={placeholder}
-            minLength={minLength}
-            maxLength={maxLength}
-            required={required}
-            onChange={handleChange}
-          />
+          <S.InputDiv>
+            <AiIcons.AiFillLock style={{ fontSize: "2em", color: "#666" }} />
+            <S.Input
+              type="password"
+              name={name}
+              placeholder={placeholder}
+              minLength={minLength}
+              maxLength={maxLength}
+              required={required}
+              onChange={handleChange}
+            />
+          </S.InputDiv>
         </div>
       );
     case "dropdown":

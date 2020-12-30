@@ -2,18 +2,25 @@ import styled from "styled-components";
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0 1em;
+  position: relative;
+  padding: 0 0.5em;
   font-size: 1.2em;
   border: none;
-  background: #ccc;
-  height: 40px;
+  height: 50px;
   border-radius: 5px;
-  color: ${(props) => props.theme.secondary.color};
+  color: #111;
   box-sizing: border-box;
-  &:focus {
-    border: 1px solid ${(props) => props.theme.secondary.focus.background};
-    outline: none;
-  }
+  outline: none;
+`;
+
+export const InputDiv = styled.div`
+  width: 100%;
+  display: flex;
+  border: 2px solid #e6e6e6;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0em 0 1em;
+  background-color: #fff;
 `;
 
 export const Select = styled.select`
@@ -42,10 +49,7 @@ export const Label = styled.label`
 
 export const TextArea = styled.textarea`
   width: 100%;
-  /* padding: 1em; */
-  /* font-size: 1.2em; */
   border: 1px solid ${(props) => props.theme.secondary.background};
-  /* border-radius: 5px; */
   box-sizing: border-box;
   &:focus {
     border: 1px solid ${(props) => props.theme.primary.focus.background};
