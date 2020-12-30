@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
       background-image: url(${logo});
       background-size: cover;
       background-repeat: no-repeat;
-        /* background: #eef5f9; */
+      background-attachment: fixed;
    }
 `;
 
