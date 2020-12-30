@@ -3,24 +3,26 @@ import styled from "styled-components";
 export const FormBox = styled.div`
   width: 100%;
   padding: 2em 4em;
-  background-color: #292f38;
+  background-color: #f7f9fb;
   border-radius: 5px;
   margin: 2em 0 2em 0;
   box-sizing: border-box;
-  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  @media only screen and (max-width: 768px) {
+    padding: 0.5em;
+  }
 `;
 
 export const Form = styled.form`
-  background: #292f38;
-  color: #eee;
+  background: #f7f9fb;
+  color: #111;
 `;
 
 export const FormTitle = styled.h3`
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
-  font-size: 1.3em;
-  color: #eee;
+  font-size: 1.6em;
+  color: #111;
   margin-bottom: 30px;
 `;
 

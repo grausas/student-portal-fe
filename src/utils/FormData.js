@@ -6,7 +6,7 @@ export const LoginUser = [
     required: true,
     minLength: 6,
     maxLEngth: 256,
-    placeholder: "jonas@email.lt",
+    placeholder: "Email",
   },
   {
     name: "password",
@@ -15,7 +15,7 @@ export const LoginUser = [
     required: true,
     minLength: 8,
     maxLength: 64,
-    placeholder: "password",
+    placeholder: "Password",
   },
 ];
 
