@@ -12,7 +12,10 @@ export const Button = styled.button`
   outline: none;
   border: none;
   border-radius: 5px;
-  padding: 0.5em 2em;
+  padding: 1em 2em;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
   &:hover {
     background: ${(props) =>
