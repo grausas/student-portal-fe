@@ -4,7 +4,6 @@ import logo from "../../assets/green.jpg";
 
 export const LoginBlock = styled(Section)`
   margin: 0 auto;
-  width: 100%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 0;
