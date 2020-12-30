@@ -46,14 +46,21 @@ function Login() {
   return (
     <S.LoginBlock>
       {error && <Notification type={type}>{error}</Notification>}
-      <Form
-        callback={(fieldValues) =>
-          signUser(fieldValues, auth, setError, setType, history)
-        }
-        fields={LoginUser}
-        titleText="Login"
-        buttonText="Login"
-      />
+      <S.ImageDiv>
+        <span>
+          Welcome to <span>students portal</span>{" "}
+        </span>
+      </S.ImageDiv>
+      <S.FormDiv>
+        <Form
+          callback={(fieldValues) =>
+            signUser(fieldValues, auth, setError, setType, history)
+          }
+          fields={LoginUser}
+          titleText="Login"
+          buttonText="Login"
+        />
+      </S.FormDiv>
     </S.LoginBlock>
   );
 }
