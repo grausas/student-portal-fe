@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const NotificationText = styled.h3`
+  width: 100%;
   color: ${(props) => (props.type === "error" ? "red" : "green")};
   background-color: #292f38;
   text-align: center;
