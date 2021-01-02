@@ -45,13 +45,13 @@ function Login() {
 
   return (
     <S.LoginBlock>
-      {error && <Notification type={type}>{error}</Notification>}
       <S.ImageDiv>
         <span>
           Welcome to <span>students portal</span>{" "}
         </span>
       </S.ImageDiv>
       <S.FormDiv>
+        {error && <Notification type={type}>{error}</Notification>}
         <Form
           callback={(fieldValues) =>
             signUser(fieldValues, auth, setError, setType, history)

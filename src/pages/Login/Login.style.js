@@ -15,11 +15,12 @@ export const LoginBlock = styled(Section)`
 
 export const FormDiv = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
   background-color: #f7f9fb;
-  padding: 8em 1em;
+  padding: 8em 5em;
   border-radius: 0 20px 20px 0;
   @media only screen and (max-width: 768px) {
     width: 100%;
