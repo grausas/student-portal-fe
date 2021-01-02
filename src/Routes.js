@@ -55,7 +55,7 @@ function Routes() {
           </Switch>
         </Suspense>
       </Container>
-      <Footer />
+      <Footer isLoggedIn={!!auth.token} />
     </Router>
   );
 }
