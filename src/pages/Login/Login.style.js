@@ -10,6 +10,7 @@ export const LoginBlock = styled(Section)`
   @media only screen and (max-width: 768px) {
     border-radius: 0;
     box-shadow: none;
+    height: 100%;
   }
 `;
 
@@ -24,8 +25,12 @@ export const FormDiv = styled.div`
   border-radius: 0 20px 20px 0;
   @media only screen and (max-width: 768px) {
     width: 100%;
+    height: 100vh;
     padding: 1em;
     border-radius: 0;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 4em 2em;
   }
 `;
 
