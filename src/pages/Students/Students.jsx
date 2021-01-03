@@ -62,20 +62,24 @@ function Students() {
       },
     })
       .then((res) => res.json())
-      .then((data) =>
-        setStudents(
-          data.map((item) => {
-            return {
-              id: item.id,
-              value: item.id,
-              text: item.name,
-              name: item.name,
-              surname: item.surname,
-              email: item.email,
-            };
-          })
-        )
-      );
+      .then((data) => {
+        if (data.ok) {
+          setStudents(
+            data.map((item) => {
+              return {
+                id: item.id,
+                value: item.id,
+                text: item.name,
+                name: item.name,
+                surname: item.surname,
+                email: item.email,
+              };
+            })
+          );
+        } else {
+          console.log("no data");
+        }
+      });
   }, [auth.token]);
 
   return (
