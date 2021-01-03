@@ -31,14 +31,14 @@ function Routes() {
   return (
     <Router>
       <GlobalStyle />
-      <Header
-        isLoggedIn={!!auth.token}
-        logOut={() => {
-          auth.setToken();
-          localStorage.removeItem("token");
-        }}
-      />
       <Container>
+        <Header
+          isLoggedIn={!!auth.token}
+          logOut={() => {
+            auth.setToken();
+            localStorage.removeItem("token");
+          }}
+        />
         <Navigation isLoggedIn={!!auth.token} />
         <Suspense fallback={<Loading />}>
           <Switch>
@@ -54,8 +54,8 @@ function Routes() {
             <PrivateRoute exact path="/groups" component={GroupLazy} />
           </Switch>
         </Suspense>
+        <Footer isLoggedIn={!!auth.token} />
       </Container>
-      <Footer isLoggedIn={!!auth.token} />
     </Router>
   );
 }
