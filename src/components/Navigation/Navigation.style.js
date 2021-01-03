@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Navigation = styled.nav`
-  position: fixed;
-  width: 200px;
+  width: 240px;
   height: 100%;
-  padding-top: 100px;
   border-right: 1px solid #ccc;
+  padding-top: 50px;
+  background-color: #fff;
 
   @media (max-width: 768px) {
     width: 0;

@@ -10,7 +10,8 @@ export const HeaderBlock = styled.div`
   color: #eee;
   position: fixed;
   z-index: 1;
-  height: 60px;
+  padding: 0 1em;
+  height: 40px;
   font-weight: 700;
   width: 100%;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
@@ -19,15 +20,11 @@ export const HeaderBlock = styled.div`
     display: flex;
     z-index: 0;
   }
-  span:last-child {
-    padding-right: 1em;
-  }
 `;
 
 export const Logo = styled.img`
-  max-height: 40px;
+  max-height: 30px;
   max-width: 100%;
-  margin-left: 20px;
   color: #eee;
 
   @media (max-width: 768px) {
@@ -36,7 +33,6 @@ export const Logo = styled.img`
 `;
 
 export const LogoBlock = styled.div`
-  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +50,6 @@ export const LogoBlock = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  padding-right: 30px;
   text-decoration: none;
 
   @media only screen and (max-width: 768px) {
@@ -63,7 +58,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const LogoutButton = styled(Button)`
-  margin-left: 30px;
+  padding: 0.5em 1em;
 
   &:hover {
     background: #01baef;
