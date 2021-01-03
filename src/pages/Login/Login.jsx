@@ -44,24 +44,26 @@ function Login() {
   const [type, setType] = useState();
 
   return (
-    <S.LoginBlock>
-      <S.ImageDiv>
-        <span>
-          Welcome to <span>students portal</span>{" "}
-        </span>
-      </S.ImageDiv>
-      <S.FormDiv>
-        {error && <Notification type={type}>{error}</Notification>}
-        <Form
-          callback={(fieldValues) =>
-            signUser(fieldValues, auth, setError, setType, history)
-          }
-          fields={LoginUser}
-          titleText="Login"
-          buttonText="Login"
-        />
-      </S.FormDiv>
-    </S.LoginBlock>
+    <>
+      <S.LoginBlock>
+        <S.ImageDiv>
+          <span>
+            Welcome to <span>students portal</span>{" "}
+          </span>
+        </S.ImageDiv>
+        <S.FormDiv>
+          {error && <Notification type={type}>{error}</Notification>}
+          <Form
+            callback={(fieldValues) =>
+              signUser(fieldValues, auth, setError, setType, history)
+            }
+            fields={LoginUser}
+            titleText="Login"
+            buttonText="Login"
+          />
+        </S.FormDiv>
+      </S.LoginBlock>
+    </>
   );
 }
 

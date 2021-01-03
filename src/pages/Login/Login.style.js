@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import { Section } from "../../components/index";
 import logo from "../../assets/green.jpg";
 
-export const LoginBlock = styled(Section)`
+export const LoginBlock = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 0;
+  background-color: #111;
   @media only screen and (max-width: 768px) {
     border-radius: 0;
     box-shadow: none;
