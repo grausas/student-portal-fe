@@ -5,7 +5,7 @@ export const LoginUser = [
     labelText: "Email:",
     required: true,
     minLength: 6,
-    maxLEngth: 256,
+    maxLength: 256,
     placeholder: "Email",
   },
   {
@@ -35,7 +35,7 @@ export const addStudent = [
     labelText: "Surname:",
     required: true,
     minLength: 2,
-    maxLEngth: 50,
+    maxLength: 50,
     placeholder: "Jonaitis",
   },
   {
@@ -44,8 +44,17 @@ export const addStudent = [
     labelText: "Email:",
     required: true,
     minLength: 6,
-    maxLEngth: 256,
+    maxLength: 256,
     placeholder: "jonas@mail.lt",
+  },
+  {
+    name: "phone",
+    type: "text",
+    labelText: "Phone:",
+    required: true,
+    minLength: 5,
+    maxLength: 15,
+    placeholder: "37062812345",
   },
 ];
 export const addGroup = [

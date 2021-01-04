@@ -22,7 +22,19 @@ export const tableStudents = (handleDelete) => {
       },
     },
     {
-      title: "Delete",
+      title: "Phone",
+      render: (rowData) => {
+        return rowData.phone;
+      },
+    },
+    {
+      title: "Studing",
+      render: (rowData) => {
+        return rowData.studing;
+      },
+    },
+    {
+      title: "Actions",
       render: (rowData) => {
         return (
           <span onClick={handleDelete(rowData)}>
