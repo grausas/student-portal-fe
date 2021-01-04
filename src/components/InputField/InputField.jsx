@@ -1,7 +1,5 @@
 import React from "react";
 import * as S from "./InputField.style";
-import * as AiIcons from "react-icons/ai";
-import * as MdIcons from "react-icons/md";
 
 function InputField({
   type,

@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const FormBox = styled.div`
   width: 100%;
-  /* padding: 2em 4em; */
-  /* background-color: #f7f9fb; */
   border-radius: 5px;
   margin: 1em 0 1em 0;
   box-sizing: border-box;
@@ -14,7 +12,6 @@ export const FormBox = styled.div`
 `;
 
 export const Form = styled.form`
-  /* background: #f7f9fb; */
   color: #111;
 `;
 

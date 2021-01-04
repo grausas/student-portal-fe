@@ -16,6 +16,7 @@ export const HeaderBlock = styled.div`
   width: 100%;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+
   @media only screen and (max-width: 768px) {
     display: flex;
     z-index: 0;

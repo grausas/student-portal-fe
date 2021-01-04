@@ -49,7 +49,6 @@ export const Table = styled.table`
   td {
     padding: 10px;
     border-bottom: 1px solid #eee;
-    text-transform: capitalize;
     @media only screen and (max-width: 768px) {
       padding: 10px 2px;
     }

@@ -11,7 +11,6 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.section`
-  /* display: flex; */
   height: 100%;
   width: 100%;
 

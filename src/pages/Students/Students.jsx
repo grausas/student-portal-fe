@@ -89,6 +89,7 @@ function Students() {
           placeholder="Search..."
           value={searchTerm}
           handleChange={handleSearch}
+          IconClassName="fas fa-search"
         />
       </S.InputWrapper>
       <h2>Students</h2>

@@ -6,10 +6,11 @@ export const UlBlock = styled.ul`
   flex-direction: column;
   width: 100%;
   list-style: none;
+  font-size: 1.2em;
 
   li {
     width: 100%;
-    padding: 6px 8px;
+    /* padding: 3px 8px; */
     color: #fff;
   }
 
@@ -31,8 +32,7 @@ export const StyledLink = styled(NavLink)`
   display: flex;
   width: 100%;
   text-decoration: none;
-  padding: 10px 0px 10px 16px;
-  border-radius: 4px;
+  padding: 15px 0px 15px 16px;
   color: #111;
 
   &:hover {

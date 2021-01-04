@@ -9,7 +9,6 @@ export const LoginBlock = styled.div`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 0;
-  background-color: #111;
   @media only screen and (max-width: 768px) {
     border-radius: 0;
     box-shadow: none;
@@ -55,6 +54,7 @@ export const ImageDiv = styled.div`
     position: relative;
     font-size: 2em;
     color: #f7f9fb;
+
     span {
       color: #ccc;
       text-decoration: underline;
