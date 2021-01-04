@@ -12,6 +12,11 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   box-sizing: border-box;
 
+  @media only screen and (max-width: 1180px) {
+    padding: 0;
+    max-width: 90%;
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 0;
     max-width: 100%;
