@@ -15,7 +15,7 @@ export const Input = styled.input`
 export const InputDiv = styled.div`
   width: 100%;
   display: flex;
-  border: 2px solid #e6e6e6;
+  /* border: 2px solid #e6e6e6; */
   justify-content: center;
   align-items: center;
   padding: 0 0em 0 1em;
