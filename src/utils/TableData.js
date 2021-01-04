@@ -30,7 +30,7 @@ export const tableStudents = (handleDelete) => {
     {
       title: "Studing",
       render: (rowData) => {
-        return rowData.studing;
+        return rowData.studing ? rowData.studing : "Not Studing";
       },
     },
     {

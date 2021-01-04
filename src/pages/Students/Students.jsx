@@ -82,7 +82,6 @@ function Students() {
 
   return (
     <Section>
-      <h2>Students</h2>
       <S.InputWrapper>
         <InputField
           type="text"
@@ -92,11 +91,11 @@ function Students() {
           handleChange={handleSearch}
         />
       </S.InputWrapper>
+      <h2>Students</h2>
       <Table
         handleClick={handleSort}
         cols={tableStudents(handleDelete)}
         data={results}
-        tableTitle="Students"
       />
     </Section>
   );
