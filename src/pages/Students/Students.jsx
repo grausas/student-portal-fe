@@ -86,7 +86,7 @@ function Students() {
         <InputField
           type="text"
           labelText="Search Student:"
-          placeholder="search..."
+          placeholder="Search..."
           value={searchTerm}
           handleChange={handleSearch}
         />

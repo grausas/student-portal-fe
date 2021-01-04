@@ -15,5 +15,6 @@ export const Navigation = styled.nav`
     padding-top: 20px;
     background: none;
     border-right: none;
+    z-index: 999;
   }
 `;

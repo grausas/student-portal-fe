@@ -28,6 +28,7 @@ export const addStudent = [
     minLength: 2,
     maxLength: 50,
     placeholder: "Jonas",
+    IconClassName: "fas fa-user",
   },
   {
     name: "surname",
@@ -37,6 +38,7 @@ export const addStudent = [
     minLength: 2,
     maxLength: 50,
     placeholder: "Jonaitis",
+    IconClassName: "fas fa-user",
   },
   {
     name: "email",
@@ -55,6 +57,7 @@ export const addStudent = [
     minLength: 5,
     maxLength: 15,
     placeholder: "37062812345",
+    IconClassName: "fas fa-phone",
   },
 ];
 export const addGroup = [

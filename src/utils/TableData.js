@@ -28,9 +28,9 @@ export const tableStudents = (handleDelete) => {
       },
     },
     {
-      title: "Studing",
+      title: "Course",
       render: (rowData) => {
-        return rowData.studing ? rowData.studing : "Not Studing";
+        return rowData.studing ? rowData.studing : "Not Studying";
       },
     },
     {
