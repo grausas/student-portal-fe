@@ -7,6 +7,7 @@ function InputField({
   type,
   name,
   labelText,
+  IconClassName,
   inputId,
   placeholder,
   required,
@@ -18,7 +19,7 @@ function InputField({
   switch (type) {
     case "longtext":
       return (
-        <div>
+        <>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
           <S.TextArea
             id={inputId}
@@ -28,19 +29,14 @@ function InputField({
             maxLength={maxLength}
             required={required}
           ></S.TextArea>
-        </div>
+        </>
       );
     case "email":
       return (
-        <div>
+        <>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
           <S.InputDiv>
-            <MdIcons.MdEmail
-              style={{
-                fontSize: "1.5em",
-                color: "#666",
-              }}
-            />
+            <S.Icon className="fas fa-envelope" />
             <S.Input
               type="email"
               name={name}
@@ -52,14 +48,14 @@ function InputField({
               onChange={handleChange}
             />
           </S.InputDiv>
-        </div>
+        </>
       );
     case "password":
       return (
-        <div>
+        <>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
           <S.InputDiv>
-            <AiIcons.AiFillLock style={{ fontSize: "2em", color: "#666" }} />
+            <S.Icon className="fas fa-lock" />
             <S.Input
               type="password"
               name={name}
@@ -70,11 +66,11 @@ function InputField({
               onChange={handleChange}
             />
           </S.InputDiv>
-        </div>
+        </>
       );
     case "dropdown":
       return (
-        <div>
+        <>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
           <S.Select
             id={inputId}
@@ -93,23 +89,26 @@ function InputField({
                 </option>
               ))}
           </S.Select>
-        </div>
+        </>
       );
     default:
       return (
-        <div>
+        <>
           <S.Label htmlFor={inputId}>{labelText}</S.Label>
-          <S.Input
-            type="text"
-            id={inputId}
-            name={name}
-            placeholder={placeholder}
-            required={required}
-            minLength={minLength}
-            maxLength={maxLength}
-            onChange={handleChange}
-          />
-        </div>
+          <S.InputDiv>
+            <S.Icon className={IconClassName}></S.Icon>
+            <S.Input
+              type="text"
+              id={inputId}
+              name={name}
+              placeholder={placeholder}
+              required={required}
+              minLength={minLength}
+              maxLength={maxLength}
+              onChange={handleChange}
+            />
+          </S.InputDiv>
+        </>
       );
   }
 }

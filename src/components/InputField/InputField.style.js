@@ -2,24 +2,27 @@ import styled from "styled-components";
 
 export const Input = styled.input`
   width: 100%;
-  position: relative;
-  padding: 0 0.5em;
+  padding: 0.8em 2.2em;
   font-size: 1.2em;
   border: none;
-  height: 50px;
   color: #111;
   box-sizing: border-box;
   outline: none;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+
+  &&:focus {
+    outline: none;
+    border-color: #01baef;
+  }
 `;
 
 export const InputDiv = styled.div`
-  width: 100%;
+  position: relative;
   display: flex;
-  /* border: 2px solid #e6e6e6; */
   justify-content: center;
   align-items: center;
-  padding: 0 0em 0 1em;
-  background-color: #fff;
+  background-color: unset;
 `;
 
 export const Select = styled.select`
@@ -54,4 +57,13 @@ export const TextArea = styled.textarea`
     border: 1px solid ${(props) => props.theme.primary.focus.background};
     outline: none;
   }
+`;
+
+export const Icon = styled.div`
+  position: absolute;
+  font-size: 1.2em;
+  color: #292f38;
+  z-index: 1;
+  left: 0;
+  padding: 0 0.8em;
 `;

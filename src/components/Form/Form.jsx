@@ -21,6 +21,7 @@ function Form({ fields, callback, buttonText, titleText, options }) {
               inputId={field.name}
               type={field.type}
               key={field.name}
+              IconClassName={field.IconClassName}
               name={field.name}
               labelText={field.labelText}
               placeholder={field.placeholder}
