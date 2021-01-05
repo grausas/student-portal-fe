@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const TableBox = styled.div`
-  padding: 1em;
-  background-color: #292f38;
-  border-radius: 5px;
+  background-color: #fff;
+  border-radius: 10px;
   margin: 2em 0;
   box-sizing: border-box;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   @media only screen and (max-width: 768px) {
@@ -16,20 +15,17 @@ export const TableBox = styled.div`
 `;
 
 export const TableTitle = styled.span`
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   font-size: 1.3em;
-  color: #ccc;
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  color: #ccc;
 
   th {
-    background: #01baef;
+    border-bottom: 2px solid #eee;
     color: #111;
     text-transform: uppercase;
     padding: 5px 10px;

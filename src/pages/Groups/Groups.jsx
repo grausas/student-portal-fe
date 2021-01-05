@@ -101,7 +101,7 @@ function Students() {
           />
         </S.FormWrapper>
         <h2>Groups</h2>
-        <Table cols={tableGroup} data={groups} tableTitle="Groups" />
+        <Table cols={tableGroup} data={groups} />
       </Section>
     </>
   );

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const InputDiv = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: unset;
+`;
+
 export const Input = styled.input`
   width: 100%;
   padding: 0.6em 2em;
@@ -17,29 +25,19 @@ export const Input = styled.input`
   }
 `;
 
-export const InputDiv = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: unset;
-`;
-
 export const Select = styled.select`
   width: 100%;
   padding: 0.6em 2em;
   font-size: 1em;
-  /* height: 40px; */
   color: #111;
-  border: none;
-  background: #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   text-transform: capitalize;
 
   &:focus {
-    border: 1px solid ${(props) => props.theme.primary.focus.background};
     outline: none;
+    border-color: #01baef;
   }
 `;
 

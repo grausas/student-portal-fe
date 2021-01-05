@@ -7,7 +7,7 @@ export const tableStudents = (handleDelete) => {
       title: "Full name",
       render: (rowData) => {
         return (
-          <span style={{ color: "#eee", textDecoration: "underline" }}>
+          <span style={{ color: "#01baef", textDecoration: "underline" }}>
             {rowData.fullname}
           </span>
         );
@@ -86,7 +86,7 @@ export const tableGroup = [
     },
   },
   {
-    title: "Student",
+    title: "Students",
     render: (rowData) => {
       return rowData.student;
     },

@@ -42,7 +42,6 @@ function Courses() {
   }, [auth.token]);
   return (
     <Section>
-      <h2>Courses</h2>
       <S.InputWrapper>
         <InputField
           type="dropdown"
@@ -52,7 +51,8 @@ function Courses() {
           handleChange={handleSearch}
         />
       </S.InputWrapper>
-      <Table cols={tableCourse} data={results} tableTitle="Courses" />
+      <h2>Courses</h2>
+      <Table cols={tableCourse} data={results} />
     </Section>
   );
 }
