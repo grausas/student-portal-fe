@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.8em 2.2em;
+  padding: 0.6em 2em;
   font-size: 1.2em;
   border: none;
   color: #111;
@@ -27,8 +27,9 @@ export const InputDiv = styled.div`
 
 export const Select = styled.select`
   width: 100%;
-  padding: 0 1em;
-  height: 40px;
+  padding: 0.6em 2em;
+  font-size: 1em;
+  /* height: 40px; */
   color: #111;
   border: none;
   background: #ccc;
@@ -61,9 +62,8 @@ export const TextArea = styled.textarea`
 
 export const Icon = styled.div`
   position: absolute;
-  font-size: 1.2em;
   color: #292f38;
   z-index: 1;
   left: 0;
-  padding: 0 0.8em;
+  padding: 0 1em;
 `;

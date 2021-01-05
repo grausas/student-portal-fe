@@ -48,7 +48,7 @@ function Login() {
       <S.LoginBlock>
         <S.ImageDiv>
           <span>
-            Welcome to <span>students portal</span>{" "}
+            Welcome to <span>student portal</span>
           </span>
         </S.ImageDiv>
         <S.FormDiv>

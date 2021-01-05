@@ -67,6 +67,7 @@ export const addGroup = [
     labelText: "Group Name:",
     required: true,
     placeholder: "Enter group number",
+    IconClassName: "fas fa-user",
   },
   {
     name: "studentId",

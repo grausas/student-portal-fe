@@ -107,6 +107,7 @@ function AddCourse() {
               labelText="Course Name:"
               type="text"
               placeholder="course name"
+              IconClassName="fas fa-book-open"
               handleChange={(e) =>
                 setData({
                   ...data,
@@ -120,6 +121,7 @@ function AddCourse() {
               labelText="Description:"
               type="text"
               placeholder="course description"
+              IconClassName="fas fa-info"
               handleChange={(e) =>
                 setData({
                   ...data,
