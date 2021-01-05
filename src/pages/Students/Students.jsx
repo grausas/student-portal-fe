@@ -18,10 +18,7 @@ function Students() {
 
     const sortedData = students.slice().sort((a, b) => {
       if (sortIndex === "0") {
-        return a.name.localeCompare(b.name);
-      }
-      if (sortIndex === "1") {
-        return a.surname.localeCompare(b.surname);
+        return a.fullname.localeCompare(b.fullname);
       }
       return 0;
     });
@@ -30,15 +27,13 @@ function Students() {
 
   const results = !searchTerm
     ? students
-    : students.filter(
-        (person) =>
-          person.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-          person.surname.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    : students.filter((person) =>
+        person.fullname.toLowerCase().includes(searchTerm.toLocaleLowerCase())
       );
 
   const handleDelete = (item) => () => {
     const itemId = item.id;
-    const studentName = item.name + " " + item.surname;
+    const studentName = item.fullname;
     window.confirm(`Do you want to delete student: ${studentName}`) &&
       fetch(`${process.env.REACT_APP_SERVER_URL}/delete/${itemId}`, {
         method: "DELETE",
