@@ -4,15 +4,13 @@ import * as FaIcons from "react-icons/ai";
 export const tableStudents = (handleDelete) => {
   return [
     {
-      title: "Name",
+      title: "Full name",
       render: (rowData) => {
-        return rowData.name;
-      },
-    },
-    {
-      title: "Surname",
-      render: (rowData) => {
-        return rowData.surname;
+        return (
+          <span style={{ color: "#eee", textDecoration: "underline" }}>
+            {rowData.fullname}
+          </span>
+        );
       },
     },
     {

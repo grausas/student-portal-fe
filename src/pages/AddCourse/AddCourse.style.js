@@ -3,15 +3,11 @@ import styled from "styled-components";
 export const InputWrapper = styled.div`
   width: 100%;
   margin-bottom: 20px;
-  &:last-child {
-    margin-left: 20px;
-    flex-shrink: 2;
-  }
 `;
 
 export const FormBox = styled.div`
   width: 60%;
-  padding: 1em 2em;
+  padding: 2em;
   background-color: #fff;
   border-radius: 5px;
   margin: 1em 0 1em 0;
