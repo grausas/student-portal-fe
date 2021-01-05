@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./Footer.style";
-import logo from "../../assets/reading.svg";
+import logo from "../../assets/reading1.svg";
 
 function Footer({ isLoggedIn }) {
   return (

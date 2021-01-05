@@ -7,11 +7,9 @@ export const Footer = styled.footer`
   text-align: center;
   padding: 1em 0;
   font-size: 0.7em;
-  background: #0b4f6c;
-  box-shadow: 2px -2px 5px 0px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  box-shadow: 2px -2px 3px 0px rgba(0, 0, 0, 0.2);
   position: fixed;
-
-  color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,15 +6,14 @@ export const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0b4f6c;
-  color: #eee;
+  background-color: #fff;
   position: fixed;
   z-index: 1;
   padding: 0 1em;
   height: 50px;
   font-weight: 700;
   width: 100%;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 
   @media only screen and (max-width: 768px) {
@@ -24,9 +23,8 @@ export const HeaderBlock = styled.div`
 `;
 
 export const Logo = styled.img`
-  max-height: 30px;
+  max-height: 40px;
   max-width: 100%;
-  color: #eee;
 
   @media (max-width: 768px) {
     display: none;
@@ -35,7 +33,6 @@ export const Logo = styled.img`
 
 export const LogoBlock = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
 
   span:last-child {
