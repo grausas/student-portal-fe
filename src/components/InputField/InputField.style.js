@@ -27,7 +27,7 @@ export const Input = styled.input`
 
 export const Select = styled.select`
   width: 100%;
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   font-size: 1em;
   color: #111;
   border: 2px solid #ccc;

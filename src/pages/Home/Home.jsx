@@ -7,7 +7,7 @@ function Home() {
     <>
       <Section>
         <S.TextBlock>
-          <h1>Welcome to students portal</h1>
+          <h1>Welcome to student's portal</h1>
           <span>Here you can....</span>
         </S.TextBlock>
       </Section>

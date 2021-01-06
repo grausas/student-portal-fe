@@ -18,11 +18,4 @@ export const FormBox = styled.div`
 
 export const Form = styled.form`
   text-align: left;
-  margin-top: 30px;
-`;
-
-export const FormTitle = styled.span`
-  font-weight: 400;
-  text-align: center;
-  font-size: 1.6em;
 `;

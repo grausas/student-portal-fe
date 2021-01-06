@@ -10,7 +10,6 @@ export const UlBlock = styled.ul`
 
   li {
     width: 100%;
-    /* padding: 3px 8px; */
     color: #fff;
   }
 

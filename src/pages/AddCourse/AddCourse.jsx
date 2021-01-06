@@ -95,7 +95,6 @@ function AddCourse() {
       {error && <Notification type={type}>{error}</Notification>}
       <h2>Add Course</h2>
       <S.FormBox>
-        <S.FormTitle>Add Course</S.FormTitle>
         <S.Form
           onSubmit={(e) => {
             e.preventDefault();

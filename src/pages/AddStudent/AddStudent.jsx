@@ -52,7 +52,6 @@ function AddStudent() {
             addStudentData(fieldValues, auth, setError, setType)
           }
           fields={addStudent}
-          titleText="Add Student"
           buttonText="Add Student"
         />
       </S.FormWrapper>
