@@ -10,3 +10,4 @@ export { default as Container } from "./Container/Container";
 export { default as Footer } from "./Footer/Footer";
 export { default as Notification } from "./Notification/Notification";
 export { default as PrivateRoute } from "./PrivateRoute/PrivateRoute";
+export { default as Modal } from "./Modal/Modal";
