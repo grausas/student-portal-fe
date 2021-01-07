@@ -55,7 +55,7 @@ function Routes() {
             <PrivateRoute exact path="/groups" component={GroupLazy} />
             <PrivateRoute
               exact
-              path="/editstudent"
+              path="/editstudent/:id"
               component={EditStudentLazy}
             />
           </Switch>

@@ -3,11 +3,13 @@ import { Section, Table, InputField } from "../../components/index";
 import { tableStudents } from "../../utils/TableData";
 import * as S from "./Students.style";
 import { AuthContext } from "../../contexts/AuthContext";
+import { useHistory } from "react-router-dom";
 
 function Students() {
   const auth = useContext(AuthContext);
   const [students, setStudents] = useState();
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -50,8 +52,11 @@ function Students() {
       });
   };
 
-  const handleEdit = () => () => {
-    console.log("Edit");
+  const handleEdit = (item) => () => {
+    history.push({
+      pathname: `/editstudent/${item.id}`,
+      state: { detail: item },
+    });
   };
 
   useEffect(() => {
