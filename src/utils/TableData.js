@@ -1,7 +1,7 @@
 import React from "react";
 import * as FaIcons from "react-icons/ai";
 
-export const tableStudents = (handleDelete) => {
+export const tableStudents = (handleDelete, handleEdit) => {
   return [
     {
       title: "Full name",
@@ -35,16 +35,29 @@ export const tableStudents = (handleDelete) => {
       title: "Actions",
       render: (rowData) => {
         return (
-          <span onClick={handleDelete(rowData)}>
-            <FaIcons.AiFillDelete
-              style={{
-                color: "red",
-                fontSize: "1.3em",
-                padding: "0",
-                cursor: "pointer",
-              }}
-            />
-          </span>
+          <>
+            <span onClick={handleDelete(rowData)}>
+              <FaIcons.AiFillDelete
+                style={{
+                  color: "red",
+                  fontSize: "1.3em",
+                  padding: "0",
+                  cursor: "pointer",
+                  marginRight: "10px",
+                }}
+              />
+            </span>
+            <span onClick={handleEdit(rowData)}>
+              <FaIcons.AiFillEdit
+                style={{
+                  color: "green",
+                  fontSize: "1.3em",
+                  padding: "0",
+                  cursor: "pointer",
+                }}
+              />
+            </span>
+          </>
         );
       },
     },

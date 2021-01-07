@@ -50,6 +50,10 @@ function Students() {
       });
   };
 
+  const handleEdit = () => () => {
+    console.log("Edit");
+  };
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/view-students`, {
       headers: {
@@ -89,7 +93,7 @@ function Students() {
       <h2>Students</h2>
       <Table
         handleClick={handleSort}
-        cols={tableStudents(handleDelete)}
+        cols={tableStudents(handleDelete, handleEdit)}
         data={results}
       />
     </Section>
