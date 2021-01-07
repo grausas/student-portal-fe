@@ -22,6 +22,7 @@ const LoginLazy = lazy(() => import("./pages/Login/Login"));
 const AddStudentLazy = lazy(() => import("./pages/AddStudent/AddStudent"));
 const AddCourseLazy = lazy(() => import("./pages/AddCourse/AddCourse"));
 const StudentsLazy = lazy(() => import("./pages/Students/Students"));
+const EditStudentLazy = lazy(() => import("./pages/EditStudent/EditStudent"));
 const CoursesLazy = lazy(() => import("./pages/Courses/Courses"));
 const GroupLazy = lazy(() => import("./pages/Groups/Groups"));
 
@@ -52,6 +53,11 @@ function Routes() {
             <PrivateRoute exact path="/students" component={StudentsLazy} />
             <PrivateRoute exact path="/courses" component={CoursesLazy} />
             <PrivateRoute exact path="/groups" component={GroupLazy} />
+            <PrivateRoute
+              exact
+              path="/editstudent"
+              component={EditStudentLazy}
+            />
           </Switch>
         </Suspense>
         <Footer isLoggedIn={!!auth.token} />

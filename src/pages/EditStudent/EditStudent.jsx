@@ -1,10 +1,11 @@
 import React from "react";
+import { Section } from "../../components";
 
 function EditStudent() {
   return (
-    <div>
+    <Section>
       <h2>Edit Student</h2>
-    </div>
+    </Section>
   );
 }
 
