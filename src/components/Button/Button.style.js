@@ -14,7 +14,6 @@ export const Button = styled.button`
   border-radius: 5px;
   padding: 1em 2em;
   width: 100%;
-  text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   &:hover {

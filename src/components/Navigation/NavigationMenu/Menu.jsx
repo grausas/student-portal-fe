@@ -10,7 +10,10 @@ function Menu({ open, handleClose }) {
           return (
             <li key={index}>
               <S.StyledLink
-                activeStyle={{ background: "#01baef", color: "#fff" }}
+                activeStyle={{
+                  background: "#01baef",
+                  color: "#fff",
+                }}
                 to={item.path}
                 onClick={handleClose}
               >

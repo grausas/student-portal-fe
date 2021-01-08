@@ -16,7 +16,6 @@ function addGroupData(data, auth, setError, setType, error) {
   })
     .then((res) => {
       if (!res.ok) {
-        error = true;
         error = false;
       }
       return res.json();

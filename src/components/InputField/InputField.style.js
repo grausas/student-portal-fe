@@ -10,8 +10,8 @@ export const InputDiv = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  padding: 0.6em 2em;
-  font-size: 1.2em;
+  padding: 0.8em 2.2em;
+  font-size: 1em;
   border: none;
   color: #111;
   box-sizing: border-box;

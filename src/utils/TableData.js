@@ -1,5 +1,6 @@
 import React from "react";
-import * as FaIcons from "react-icons/ai";
+import * as AiIcons from "react-icons/ai";
+import * as FaIcons from "react-icons/fa";
 
 export const tableStudents = (handleDelete, handleEdit) => {
   return [
@@ -32,12 +33,12 @@ export const tableStudents = (handleDelete, handleEdit) => {
       },
     },
     {
-      title: "Actions",
+      title: "Action",
       render: (rowData) => {
         return (
           <>
             <span onClick={handleDelete(rowData)}>
-              <FaIcons.AiFillDelete
+              <AiIcons.AiFillDelete
                 style={{
                   color: "red",
                   fontSize: "1.3em",
@@ -48,7 +49,7 @@ export const tableStudents = (handleDelete, handleEdit) => {
               />
             </span>
             <span onClick={handleEdit(rowData)}>
-              <FaIcons.AiFillEdit
+              <FaIcons.FaEdit
                 style={{
                   color: "green",
                   fontSize: "1.3em",
@@ -66,15 +67,9 @@ export const tableStudents = (handleDelete, handleEdit) => {
 
 export const tableCourse = [
   {
-    title: "Name",
+    title: "Course Title",
     render: (rowData) => {
       return rowData.name;
-    },
-  },
-  {
-    title: "Description",
-    render: (rowData) => {
-      return rowData.description;
     },
   },
   {
@@ -84,7 +79,13 @@ export const tableCourse = [
     },
   },
   {
-    title: "Group Students",
+    title: "Description",
+    render: (rowData) => {
+      return rowData.description;
+    },
+  },
+  {
+    title: "Students",
     render: (rowData) => {
       return rowData.group;
     },

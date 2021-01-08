@@ -57,8 +57,4 @@ export const StyledLink = styled(Link)`
 
 export const LogoutButton = styled(Button)`
   padding: 0.5em 1em;
-
-  &:hover {
-    background: #01baef;
-  }
 `;
