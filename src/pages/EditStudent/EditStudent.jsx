@@ -81,7 +81,7 @@ function EditStudent() {
               labelText="Name:"
               type="text"
               IconClassName="fas fa-user"
-              onChange={(e) =>
+              handleChange={(e) =>
                 setData({
                   ...data,
                   name: e.target.value.split(" ").join(""),
@@ -95,7 +95,7 @@ function EditStudent() {
               labelText="Surname:"
               type="text"
               IconClassName="fas fa-user"
-              onChange={(e) =>
+              handleChange={(e) =>
                 setData({
                   ...data,
                   surname: e.target.value.split(" ").join(""),
@@ -108,7 +108,7 @@ function EditStudent() {
               defaultValue={data.email}
               type="email"
               labelText="Email:"
-              onChange={(e) =>
+              handleChange={(e) =>
                 setData({
                   ...data,
                   email: e.target.value.split(" ").join(""),
@@ -123,7 +123,7 @@ function EditStudent() {
               labelText="Phone:"
               type="text"
               IconClassName="fas fa-phone"
-              onChange={(e) =>
+              handleChange={(e) =>
                 setData({
                   ...data,
                   phone: e.target.value.split(" ").join(""),
