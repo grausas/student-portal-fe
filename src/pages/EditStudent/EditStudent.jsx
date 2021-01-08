@@ -49,50 +49,60 @@ function EditStudent() {
             editStudentData(data, auth);
           }}
         >
-          <InputField
-            defaultValue={data.name}
-            labelText="Name:"
-            type="text"
-            onChange={(e) =>
-              setData({
-                ...data,
-                name: e.target.value.split(" ").join(""),
-              })
-            }
-          />
-          <InputField
-            defaultValue={data.surname}
-            labelText="Surname:"
-            type="text"
-            onChange={(e) =>
-              setData({
-                ...data,
-                surname: e.target.value.split(" ").join(""),
-              })
-            }
-          />
-          <InputField
-            defaultValue={data.email}
-            type="email"
-            labelText="Email:"
-            onChange={(e) =>
-              setData({
-                ...data,
-                email: e.target.value.split(" ").join(""),
-              })
-            }
-          />
-          <InputField
-            defaultValue={data.phone}
-            labelText="Phone:"
-            type="text"
-            onChange={(e) =>
-              setData({
-                ...data,
-                phone: e.target.value.split(" ").join(""),
-              })
-            }
-          />
+          <S.InputWrapper>
+            <InputField
+              defaultValue={data.name}
+              labelText="Name:"
+              type="text"
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  name: e.target.value.split(" ").join(""),
+                })
+              }
+            />
+          </S.InputWrapper>
+          <S.InputWrapper>
+            <InputField
+              defaultValue={data.surname}
+              labelText="Surname:"
+              type="text"
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  surname: e.target.value.split(" ").join(""),
+                })
+              }
+            />
+          </S.InputWrapper>
+          <S.InputWrapper>
+            <InputField
+              defaultValue={data.email}
+              type="email"
+              labelText="Email:"
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  email: e.target.value.split(" ").join(""),
+                })
+              }
+            />
+          </S.InputWrapper>
+
+          <S.InputWrapper>
+            <InputField
+              defaultValue={data.phone}
+              labelText="Phone:"
+              type="text"
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  phone: e.target.value.split(" ").join(""),
+                })
+              }
+            />
+          </S.InputWrapper>
+
           <Button>Edit Student</Button>
         </form>
       </S.FormWrapper>
