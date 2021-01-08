@@ -54,6 +54,7 @@ function EditStudent() {
               defaultValue={data.name}
               labelText="Name:"
               type="text"
+              IconClassName="fas fa-user"
               onChange={(e) =>
                 setData({
                   ...data,
@@ -67,6 +68,7 @@ function EditStudent() {
               defaultValue={data.surname}
               labelText="Surname:"
               type="text"
+              IconClassName="fas fa-user"
               onChange={(e) =>
                 setData({
                   ...data,
@@ -94,6 +96,7 @@ function EditStudent() {
               defaultValue={data.phone}
               labelText="Phone:"
               type="text"
+              IconClassName="fas fa-phone"
               onChange={(e) =>
                 setData({
                   ...data,
