@@ -55,7 +55,7 @@ function EditStudent() {
             onChange={(e) =>
               setData({
                 ...data,
-                name: e.target.value,
+                name: e.target.value.split(" ").join(""),
               })
             }
           />
@@ -65,7 +65,7 @@ function EditStudent() {
             onChange={(e) =>
               setData({
                 ...data,
-                surname: e.target.value,
+                surname: e.target.value.split(" ").join(""),
               })
             }
           />
@@ -75,7 +75,7 @@ function EditStudent() {
             onChange={(e) =>
               setData({
                 ...data,
-                email: e.target.value,
+                email: e.target.value.split(" ").join(""),
               })
             }
           />
@@ -85,7 +85,7 @@ function EditStudent() {
             onChange={(e) =>
               setData({
                 ...data,
-                phone: e.target.value,
+                phone: e.target.value.split(" ").join(""),
               })
             }
           />
