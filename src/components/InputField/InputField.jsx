@@ -13,6 +13,7 @@ function InputField({
   maxLength,
   handleChange,
   options,
+  defaultValue,
 }) {
   switch (type) {
     case "longtext":
@@ -39,6 +40,7 @@ function InputField({
               type="email"
               name={name}
               id={inputId}
+              defaultValue={defaultValue}
               placeholder={placeholder}
               minLength={minLength}
               maxLength={maxLength}
@@ -99,6 +101,7 @@ function InputField({
               type="text"
               id={inputId}
               name={name}
+              defaultValue={defaultValue}
               placeholder={placeholder}
               required={required}
               minLength={minLength}
