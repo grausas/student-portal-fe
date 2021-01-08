@@ -7,6 +7,8 @@ export const UlBlock = styled.ul`
   width: 100%;
   list-style: none;
   font-size: 1.2em;
+  border-radius: 15px;
+  padding: 0 12px;
 
   li {
     width: 100%;
@@ -33,6 +35,7 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   padding: 15px 0px 15px 16px;
   color: #111;
+  border-radius: 10px;
 
   &:hover {
     background: #01baef;
