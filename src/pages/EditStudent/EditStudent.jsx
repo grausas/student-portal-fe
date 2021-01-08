@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Section, InputField, Button } from "../../components";
+import { Section, InputField, Button, Notification } from "../../components";
 import * as S from "./EditStudent.style";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
-function editStudentData(data, auth) {
+function editStudentData(data, auth, setError, setType, error) {
   const id = data.id;
+  console.log(data);
+  //   const studentName = data.fullname;
   fetch(`${process.env.REACT_APP_SERVER_URL}/editstudent/${id}`, {
     method: "POST",
     headers: {
@@ -13,12 +15,35 @@ function editStudentData(data, auth) {
       Authorization: `Bearer ${auth.token}`,
     },
     body: JSON.stringify(data),
-  });
+  })
+    .then((res) => {
+      if (!res.ok) {
+        error = true;
+      } else {
+        error = false;
+      }
+      return res.json();
+    })
+    .then((data) => {
+      if (error) {
+        setType("error");
+        setError(data.msg);
+      } else {
+        setType("");
+        setError(`Student was successfully added`);
+      }
+    })
+    .catch((err) => {
+      setError(err.message);
+      setType("error");
+    });
 }
 
 function EditStudent() {
   const auth = useContext(AuthContext);
   const location = useLocation();
+  const [error, setError] = useState();
+  const [type, setType] = useState();
 
   const [data, setData] = useState({
     id: "",
@@ -41,12 +66,13 @@ function EditStudent() {
 
   return (
     <Section>
+      {error && <Notification type={type}>{error}</Notification>}
       <h2>Edit Student</h2>
       <S.FormWrapper>
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            editStudentData(data, auth);
+            editStudentData(data, auth, setError, setType);
           }}
         >
           <S.InputWrapper>
@@ -105,7 +131,6 @@ function EditStudent() {
               }
             />
           </S.InputWrapper>
-
           <Button>Edit Student</Button>
         </form>
       </S.FormWrapper>
