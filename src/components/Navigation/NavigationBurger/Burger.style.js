@@ -19,8 +19,7 @@ export const LogoBlock = styled.div`
 
 export const StyledLinkBurger = styled.div`
   font-size: 2em;
-  padding: 12px 10px;
-  color: #eee;
+  padding: 10px;
   cursor: pointer;
   @media only screen and (max-width: 768px) {
     display: block;

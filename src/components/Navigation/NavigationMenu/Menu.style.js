@@ -17,7 +17,7 @@ export const UlBlock = styled.ul`
     position: fixed;
     width: 220px;
     height: 100vh;
-    background-color: #0b4f6c;
+    background-color: #fff;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 
     li {
@@ -42,7 +42,6 @@ export const StyledLink = styled(NavLink)`
   }
 
   @media only screen and (max-width: 768px) {
-    color: #eee;
     &:hover {
       background: #01baef;
       color: #111;
@@ -53,7 +52,7 @@ export const StyledLink = styled(NavLink)`
 export const IconBlock = styled.div`
   color: #292f38;
   @media only screen and (max-width: 768px) {
-    color: #eee;
+    color: #111;
     &:hover {
       color: #fff;
     }
