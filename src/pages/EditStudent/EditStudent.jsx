@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Section } from "../../components";
+import { Section, InputField, Button } from "../../components";
 import * as S from "./EditStudent.style";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -49,8 +49,9 @@ function EditStudent() {
             editStudentData(data, auth);
           }}
         >
-          <input
+          <InputField
             defaultValue={data.name}
+            labelText="Name:"
             type="text"
             onChange={(e) =>
               setData({
@@ -59,8 +60,9 @@ function EditStudent() {
               })
             }
           />
-          <input
+          <InputField
             defaultValue={data.surname}
+            labelText="Surname:"
             type="text"
             onChange={(e) =>
               setData({
@@ -69,9 +71,10 @@ function EditStudent() {
               })
             }
           />
-          <input
+          <InputField
             defaultValue={data.email}
-            type="text"
+            type="email"
+            labelText="Email:"
             onChange={(e) =>
               setData({
                 ...data,
@@ -79,8 +82,9 @@ function EditStudent() {
               })
             }
           />
-          <input
+          <InputField
             defaultValue={data.phone}
+            labelText="Phone:"
             type="text"
             onChange={(e) =>
               setData({
@@ -89,7 +93,7 @@ function EditStudent() {
               })
             }
           />
-          <button>edit</button>
+          <Button>Edit Student</Button>
         </form>
       </S.FormWrapper>
     </Section>
