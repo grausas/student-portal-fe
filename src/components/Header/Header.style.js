@@ -34,16 +34,15 @@ export const Logo = styled.img`
 export const LogoBlock = styled.div`
   display: flex;
   align-items: center;
+  width: 200px;
 
   span:last-child {
-    padding-right: 0;
+    margin-left: 5px;
 
     @media only screen and (max-width: 768px) {
       display: none;
     }
   }
-  .icon {
-    color: #ccc;
   }
 `;
 
