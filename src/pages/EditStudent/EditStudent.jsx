@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Section } from "../../components";
+import * as S from "./EditStudent.style";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
@@ -41,54 +42,56 @@ function EditStudent() {
   return (
     <Section>
       <h2>Edit Student</h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          editStudentData(data, auth);
-        }}
-      >
-        <input
-          defaultValue={data.name}
-          type="text"
-          onChange={(e) =>
-            setData({
-              ...data,
-              name: e.target.value,
-            })
-          }
-        />
-        <input
-          defaultValue={data.surname}
-          type="text"
-          onChange={(e) =>
-            setData({
-              ...data,
-              surname: e.target.value,
-            })
-          }
-        />
-        <input
-          defaultValue={data.email}
-          type="text"
-          onChange={(e) =>
-            setData({
-              ...data,
-              email: e.target.value,
-            })
-          }
-        />
-        <input
-          defaultValue={data.phone}
-          type="text"
-          onChange={(e) =>
-            setData({
-              ...data,
-              phone: e.target.value,
-            })
-          }
-        />
-        <button>edit</button>
-      </form>
+      <S.FormWrapper>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            editStudentData(data, auth);
+          }}
+        >
+          <input
+            defaultValue={data.name}
+            type="text"
+            onChange={(e) =>
+              setData({
+                ...data,
+                name: e.target.value,
+              })
+            }
+          />
+          <input
+            defaultValue={data.surname}
+            type="text"
+            onChange={(e) =>
+              setData({
+                ...data,
+                surname: e.target.value,
+              })
+            }
+          />
+          <input
+            defaultValue={data.email}
+            type="text"
+            onChange={(e) =>
+              setData({
+                ...data,
+                email: e.target.value,
+              })
+            }
+          />
+          <input
+            defaultValue={data.phone}
+            type="text"
+            onChange={(e) =>
+              setData({
+                ...data,
+                phone: e.target.value,
+              })
+            }
+          />
+          <button>edit</button>
+        </form>
+      </S.FormWrapper>
     </Section>
   );
 }
