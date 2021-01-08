@@ -6,8 +6,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 function editStudentData(data, auth, setError, setType, error) {
   const id = data.id;
-  console.log(data);
-  //   const studentName = data.fullname;
+  const studentName = data.name + " " + data.surname;
   fetch(`${process.env.REACT_APP_SERVER_URL}/editstudent/${id}`, {
     method: "POST",
     headers: {
@@ -30,7 +29,7 @@ function editStudentData(data, auth, setError, setType, error) {
         setError(data.msg);
       } else {
         setType("");
-        setError(`Student was successfully added`);
+        setError(`Student ${studentName}  was successfully edited`);
       }
     })
     .catch((err) => {
@@ -80,6 +79,8 @@ function EditStudent() {
               defaultValue={data.name}
               labelText="Name:"
               type="text"
+              minLength="2"
+              maxLength="50"
               IconClassName="fas fa-user"
               handleChange={(e) =>
                 setData({
@@ -94,6 +95,8 @@ function EditStudent() {
               defaultValue={data.surname}
               labelText="Surname:"
               type="text"
+              minLength="2"
+              maxLength="50"
               IconClassName="fas fa-user"
               handleChange={(e) =>
                 setData({
@@ -108,6 +111,8 @@ function EditStudent() {
               defaultValue={data.email}
               type="email"
               labelText="Email:"
+              minLength="6"
+              maxLength="256"
               handleChange={(e) =>
                 setData({
                   ...data,
@@ -122,6 +127,8 @@ function EditStudent() {
               defaultValue={data.phone}
               labelText="Phone:"
               type="text"
+              minLength="5"
+              maxLength="15"
               IconClassName="fas fa-phone"
               handleChange={(e) =>
                 setData({
