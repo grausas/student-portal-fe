@@ -53,10 +53,12 @@ function Students() {
   };
 
   const handleEdit = (item) => () => {
-    history.push({
-      pathname: `/editstudent/${item.id}`,
-      state: { detail: item },
-    });
+    const studentName = item.fullname;
+    window.confirm(`Do you want to delete student: ${studentName}`) &&
+      history.push({
+        pathname: `/editstudent/${item.id}`,
+        state: { detail: item },
+      });
   };
 
   useEffect(() => {
