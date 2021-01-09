@@ -1,4 +1,5 @@
 import React from "react";
+import { Loading } from "../index";
 import PropTypes from "prop-types";
 import * as S from "./Table.style";
 
@@ -23,16 +24,20 @@ const Table = ({ cols, data, tableTitle, handleClick }) => {
             ))}
           </tr>
         </thead>
-        <tbody>
-          {data &&
-            data.map((item, index) => (
-              <tr key={index}>
-                {cols.map((col, key) => (
-                  <td key={key}>{col.render(item)}</td>
-                ))}
-              </tr>
-            ))}
-        </tbody>
+        {data ? (
+          <tbody>
+            {data &&
+              data.map((item, index) => (
+                <tr key={index}>
+                  {cols.map((col, key) => (
+                    <td key={key}>{col.render(item)}</td>
+                  ))}
+                </tr>
+              ))}
+          </tbody>
+        ) : (
+          <Loading />
+        )}
       </S.Table>
     </S.TableBox>
   );

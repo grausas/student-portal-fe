@@ -43,7 +43,6 @@ export const LogoBlock = styled.div`
       display: none;
     }
   }
-  }
 `;
 
 export const StyledLink = styled(Link)`

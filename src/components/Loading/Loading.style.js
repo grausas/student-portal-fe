@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   background: #eee;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ export const LoadingBlock = styled.div`
     content: "";
     width: 50px;
     height: 50px;
-    background: #1a6844;
+    background: #01baef;
     animation: animate 0.5s linear infinite;
     position: absolute;
     top: 0;
