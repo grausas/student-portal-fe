@@ -105,7 +105,7 @@ function AddCourse() {
             <InputField
               labelText="Course Name:"
               type="text"
-              placeholder="course name"
+              placeholder="Course name"
               IconClassName="fas fa-book-open"
               handleChange={(e) =>
                 setData({
@@ -119,7 +119,7 @@ function AddCourse() {
             <InputField
               labelText="Description:"
               type="text"
-              placeholder="course description"
+              placeholder="Course description"
               IconClassName="fas fa-info"
               handleChange={(e) =>
                 setData({

@@ -37,14 +37,18 @@ export const Table = styled.table`
   tr {
     padding: 10px;
     text-align: left;
+    border-bottom: 1px solid #eee;
     @media only screen and (max-width: 768px) {
       padding: 10px 2px;
     }
   }
 
+  tr:last-child {
+    border-bottom: none;
+  }
+
   td {
     padding: 10px;
-    border-bottom: 1px solid #eee;
     @media only screen and (max-width: 768px) {
       padding: 10px 2px;
     }

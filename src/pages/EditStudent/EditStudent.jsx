@@ -29,7 +29,7 @@ function editStudentData(data, auth, setError, setType, error) {
         setError(data.msg);
       } else {
         setType("");
-        setError(`Student ${studentName}  was successfully edited`);
+        setError(`Student ${studentName} was successfully edited`);
       }
     })
     .catch((err) => {
