@@ -7,24 +7,24 @@ const Table = ({ cols, data, tableTitle, handleClick }) => {
   return (
     <S.TableBox>
       <S.TableTitle>{tableTitle}</S.TableTitle>
-      <S.Table>
-        <thead>
-          <tr>
-            {cols.map((headerItem, index) => (
-              <th key={index}>
-                <span
-                  key={index}
-                  onClick={handleClick}
-                  id={index}
-                  className={index}
-                >
-                  {headerItem.title}
-                </span>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        {data ? (
+      {data ? (
+        <S.Table>
+          <thead>
+            <tr>
+              {cols.map((headerItem, index) => (
+                <th key={index}>
+                  <span
+                    key={index}
+                    onClick={handleClick}
+                    id={index}
+                    className={index}
+                  >
+                    {headerItem.title}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          </thead>
           <tbody>
             {data &&
               data.map((item, index) => (
@@ -35,10 +35,10 @@ const Table = ({ cols, data, tableTitle, handleClick }) => {
                 </tr>
               ))}
           </tbody>
-        ) : (
-          <Loading />
-        )}
-      </S.Table>
+        </S.Table>
+      ) : (
+        <Loading />
+      )}
     </S.TableBox>
   );
 };
