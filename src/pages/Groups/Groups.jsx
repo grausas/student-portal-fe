@@ -49,7 +49,6 @@ function Students() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setGroups(data);
       });
   }, [auth.token]);

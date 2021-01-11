@@ -6,7 +6,6 @@ export const TableBox = styled.div`
   margin: 2em 0;
   box-sizing: border-box;
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
-  text-align: center;
 
   @media only screen and (max-width: 768px) {
     padding: 1em 0.3em;
@@ -26,6 +25,7 @@ export const Table = styled.table`
 
   th {
     border-bottom: 2px solid #eee;
+    text-align: left;
     color: #111;
     text-transform: uppercase;
     padding: 5px 10px;
@@ -35,8 +35,6 @@ export const Table = styled.table`
   }
 
   tr {
-    padding: 10px;
-    text-align: left;
     border-bottom: 1px solid #eee;
     @media only screen and (max-width: 768px) {
       padding: 10px 2px;
@@ -48,7 +46,7 @@ export const Table = styled.table`
   }
 
   td {
-    padding: 10px;
+    padding: 8px 10px;
     @media only screen and (max-width: 768px) {
       padding: 10px 2px;
     }

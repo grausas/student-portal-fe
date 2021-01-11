@@ -6,13 +6,13 @@ export const UlBlock = styled.ul`
   flex-direction: column;
   width: 100%;
   list-style: none;
-  font-size: 1.2em;
-  border-radius: 15px;
-  padding: 0 12px;
+  font-size: 1em;
+  padding: 0 10px;
 
   li {
     width: 100%;
     color: #fff;
+    margin: 2px 0;
   }
 
   @media screen and (max-width: 768px) {
