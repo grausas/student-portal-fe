@@ -49,17 +49,8 @@ function Students() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setGroups(
-          data.map((item) => {
-            return {
-              id: item.id,
-              value: item.id,
-              text: item.groupId,
-              groupid: item.groupId,
-              student: item.student,
-            };
-          })
-        );
+        console.log(data);
+        setGroups(data);
       });
   }, [auth.token]);
 

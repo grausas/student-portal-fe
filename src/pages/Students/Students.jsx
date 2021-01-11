@@ -54,7 +54,7 @@ function Students() {
 
   const handleEdit = (item) => () => {
     const studentName = item.fullname;
-    window.confirm(`Do you want to delete student: ${studentName}`) &&
+    window.confirm(`Do you want to edit student: ${studentName}`) &&
       history.push({
         pathname: `/editstudent/${item.id}`,
         state: { detail: item },

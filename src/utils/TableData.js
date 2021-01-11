@@ -96,7 +96,7 @@ export const tableGroup = [
   {
     title: "Group",
     render: (rowData) => {
-      return rowData.groupid;
+      return rowData.groupId;
     },
   },
   {
