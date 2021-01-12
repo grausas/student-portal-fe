@@ -92,7 +92,7 @@ export const tableCourse = [
   },
 ];
 
-export const tableGroup = [
+export const tableGroup = (handleDelete) => [
   {
     title: "Group",
     render: (rowData) => {
@@ -103,6 +103,24 @@ export const tableGroup = [
     title: "Students",
     render: (rowData) => {
       return rowData.student;
+    },
+  },
+  {
+    title: "Action",
+    render: (rowData) => {
+      return (
+        <span onClick={handleDelete(rowData)}>
+          <AiIcons.AiFillDelete
+            style={{
+              color: "red",
+              fontSize: "1.3em",
+              padding: "0",
+              cursor: "pointer",
+              marginRight: "10px",
+            }}
+          />
+        </span>
+      );
     },
   },
 ];
