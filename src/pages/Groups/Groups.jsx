@@ -41,6 +41,26 @@ function Students() {
   const [type, setType] = useState();
   const [students, setStudents] = useState([]);
 
+  const handleDelete = (item) => () => {
+    console.log(item);
+    const group = item.groupId;
+    const groupId = item.id;
+    window.confirm(`Do you want to delete group: ${groupId}`) &&
+      fetch(`${process.env.REACT_APP_SERVER_URL}/deletegroup/${group}`, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${auth.token}`,
+        },
+      }).then((response) => {
+        if (!response.ok) {
+          throw response;
+        } else {
+          setGroups(groups.filter((item) => group !== item.groupId));
+        }
+      });
+  };
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/view-groups`, {
       headers: {
@@ -90,7 +110,7 @@ function Students() {
           />
         </S.FormWrapper>
         <h2>Groups</h2>
-        <Table cols={tableGroup} data={groups} />
+        <Table cols={tableGroup(handleDelete)} data={groups} />
       </Section>
     </>
   );
