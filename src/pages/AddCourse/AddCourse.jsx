@@ -110,7 +110,7 @@ function AddCourse() {
               handleChange={(e) =>
                 setData({
                   ...data,
-                  courseName: e.target.value.split(" ").join(""),
+                  courseName: e.target.value,
                 })
               }
             />
@@ -124,7 +124,7 @@ function AddCourse() {
               handleChange={(e) =>
                 setData({
                   ...data,
-                  description: e.target.value.split(" ").join(""),
+                  description: e.target.value,
                 })
               }
             />
