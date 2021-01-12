@@ -26,14 +26,19 @@ const Table = ({ cols, data, tableTitle, handleClick }) => {
             </tr>
           </thead>
           <tbody>
-            {data &&
+            {data.length > 0 ? (
               data.map((item, index) => (
                 <tr key={index}>
                   {cols.map((col, key) => (
                     <td key={key}>{col.render(item)}</td>
                   ))}
                 </tr>
-              ))}
+              ))
+            ) : (
+              <tr>
+                <td>There is no data</td>
+              </tr>
+            )}
           </tbody>
         </S.Table>
       ) : (

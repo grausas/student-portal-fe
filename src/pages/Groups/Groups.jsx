@@ -42,7 +42,6 @@ function Students() {
   const [students, setStudents] = useState([]);
 
   const handleDelete = (item) => () => {
-    console.log(item);
     const group = item.groupId;
     const groupId = item.id;
     window.confirm(`Do you want to delete group: ${groupId}`) &&
