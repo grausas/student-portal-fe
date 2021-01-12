@@ -69,14 +69,18 @@ function Students() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setStudents(
           data.map((item) => {
             return {
               id: item.id,
               value: item.id,
               text: item.name,
-              fullname: item.name + " " + item.surname,
+              fullname:
+                item.name.charAt(0).toUpperCase() +
+                item.name.slice(1) +
+                " " +
+                item.surname.charAt(0).toUpperCase() +
+                item.surname.slice(1),
               email: item.email,
               phone: "+" + item.phone,
               studing: item.course_name,
