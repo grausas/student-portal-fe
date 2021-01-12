@@ -24,7 +24,7 @@ function Courses() {
       },
     })
       .then((res) => res.json())
-      .then((data) =>
+      .then((data) => {
         setCourses(
           data.map((item) => {
             return {
@@ -37,8 +37,8 @@ function Courses() {
               group: item.students,
             };
           })
-        )
-      );
+        );
+      });
   }, [auth.token]);
   return (
     <Section>
