@@ -5,8 +5,8 @@ export const CardBlock = styled.div`
   flex-direction: row;
   box-sizing: border-box;
   background: #fff;
-  max-width: 350px;
-  margin-bottom: 20px;
+  flex: 1;
+  margin: 10px;
   padding: 1em;
   border-radius: 10px;
   border: 2px solid #eee;
@@ -18,6 +18,7 @@ export const CardImage = styled.div`
   flex: 1;
   padding-right: 1em;
   img {
+    min-width: 100px;
     max-width: 150px;
     width: 100%;
   }
@@ -25,13 +26,13 @@ export const CardImage = styled.div`
 
 export const CardText = styled.div`
   flex: 1;
-  max-width: 100%;
   padding-left: 1em;
   border-left: 2px solid #111;
 `;
 
 export const CardTitle = styled.div`
   font-size: 1.2em;
+  font-weight: 500;
 `;
 
 export const CardInfo = styled.div`
