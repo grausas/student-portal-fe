@@ -8,7 +8,7 @@ function Footer({ isLoggedIn }) {
       {isLoggedIn && (
         <S.Footer>
           <S.Logo src={logo} alt="footer" />
-          <span>Student Portal &copy; All Rights Reserved 2020</span>
+          <span>Student Portal &copy; All Rights Reserved 2021</span>
         </S.Footer>
       )}
     </>

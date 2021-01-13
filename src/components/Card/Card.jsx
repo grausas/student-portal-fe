@@ -12,7 +12,7 @@ function Card({ data }) {
             </S.CardImage>
             <S.CardText>
               <S.CardTitle>{item.name}</S.CardTitle>
-              <S.CardInfo> {item.info} </S.CardInfo>
+              <S.CardInfo>{item.info}</S.CardInfo>
             </S.CardText>
           </S.CardBlock>
         ))}

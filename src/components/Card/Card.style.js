@@ -6,12 +6,10 @@ export const CardBlock = styled.div`
   box-sizing: border-box;
   background: #fff;
   flex: 1;
-  margin: 10px;
+  margin: 5px;
   padding: 1em;
   border-radius: 10px;
-  border: 2px solid #eee;
   text-align: center;
-  box-sizing: border-box;
 `;
 
 export const CardImage = styled.div`
@@ -26,18 +24,21 @@ export const CardImage = styled.div`
 
 export const CardText = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 1em;
   border-left: 2px solid #111;
 `;
 
 export const CardTitle = styled.div`
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 500;
 `;
 
 export const CardInfo = styled.div`
   margin-top: 1em;
   background: #eef5f9;
-  padding: 1.5em;
+  padding: 1.5em 0;
   border-radius: 10px;
 `;
