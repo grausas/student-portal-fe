@@ -10,6 +10,7 @@ export const CardBlock = styled.div`
   padding: 1em;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
 `;
 
 export const CardImage = styled.div`
@@ -37,8 +38,10 @@ export const CardTitle = styled.div`
 `;
 
 export const CardInfo = styled.div`
+  font-size: 1.2em;
+  font-weight: 500;
   margin-top: 1em;
   background: #eef5f9;
-  padding: 1.5em 0;
+  padding: 1.2em 0;
   border-radius: 10px;
 `;
