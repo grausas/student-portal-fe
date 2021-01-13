@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/reading1.svg";
+import logo from "../../assets/mortarboard.png";
 import * as S from "./Header.style";
 
 function Header({ isLoggedIn, logOut }) {
