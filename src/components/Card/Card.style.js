@@ -5,25 +5,38 @@ export const CardBlock = styled.div`
   flex-direction: row;
   box-sizing: border-box;
   background: #fff;
-  width: 350px;
+  max-width: 350px;
   margin-bottom: 20px;
   padding: 1em;
   border-radius: 10px;
   border: 2px solid #eee;
   text-align: center;
+  box-sizing: border-box;
 `;
 
-export const CardImage = styled.img`
-  max-width: 150px;
+export const CardImage = styled.div`
+  flex: 1;
+  padding-right: 1em;
+  img {
+    max-width: 150px;
+    width: 100%;
+  }
+`;
+
+export const CardText = styled.div`
+  flex: 1;
+  max-width: 100%;
+  padding-left: 1em;
+  border-left: 2px solid #111;
 `;
 
 export const CardTitle = styled.div`
   font-size: 1.2em;
-  margin-top: 10px;
 `;
 
 export const CardInfo = styled.div`
-  background: #eee;
-  padding: 20px;
+  margin-top: 1em;
+  background: #eef5f9;
+  padding: 1.5em;
   border-radius: 10px;
 `;

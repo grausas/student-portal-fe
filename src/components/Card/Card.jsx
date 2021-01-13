@@ -7,11 +7,13 @@ function Card({ data }) {
       {data &&
         data.map((item, index) => (
           <S.CardBlock key={index}>
-            <S.CardImage src={item.image} />
-            <div>
+            <S.CardImage>
+              <img src={item.image} alt="logo" />
+            </S.CardImage>
+            <S.CardText>
               <S.CardTitle>{item.name}</S.CardTitle>
-              <S.CardInfo> 22 </S.CardInfo>
-            </div>
+              <S.CardInfo> {item.info} </S.CardInfo>
+            </S.CardText>
           </S.CardBlock>
         ))}
     </>
