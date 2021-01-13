@@ -6,10 +6,8 @@ function Home() {
   return (
     <>
       <Section>
-        <S.TextBlock>
-          <h1>Welcome to student's portal</h1>
-          <span>Here you can....</span>
-        </S.TextBlock>
+        <h1>Welcome to student's portal</h1>
+        <S.FlexDiv></S.FlexDiv>
       </Section>
     </>
   );
