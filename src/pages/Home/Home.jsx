@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Section, Card } from "../../components";
 import * as S from "./Home.style";
-// import { homeData } from "../../utils/HomeData";
 import { AuthContext } from "../../contexts/AuthContext";
 import students from "../../assets/students.png";
 import teacher from "../../assets/teacher.png";
@@ -11,6 +10,8 @@ function Home() {
   const auth = useContext(AuthContext);
   const [counts, setCounts] = useState({
     studentsCount: "",
+    lecturersCount: "",
+    coursesCount: "",
   });
 
   useEffect(() => {
@@ -21,7 +22,13 @@ function Home() {
     })
       .then((res) => res.json())
       .then((data) =>
-        data.map((item) => setCounts({ studentsCount: item.studentsCount }))
+        data.map((item) =>
+          setCounts({
+            studentsCount: item.studentsCount,
+            lecturersCount: item.lecturersCount,
+            coursesCount: item.coursesCount,
+          })
+        )
       );
   }, [auth.token]);
 
@@ -34,10 +41,12 @@ function Home() {
     {
       name: "Lecturers",
       image: teacher,
+      info: counts.lecturersCount,
     },
     {
-      name: "Graduates",
+      name: "Courses",
       image: graduate,
+      info: counts.coursesCount,
     },
   ];
 
