@@ -9,7 +9,9 @@ import graduate from "../../assets/graduate.png";
 
 function Home() {
   const auth = useContext(AuthContext);
-  const [counts, setCounts] = useState();
+  const [counts, setCounts] = useState({
+    studentsCount: "",
+  });
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_SERVER_URL}/counts`, {
@@ -18,14 +20,16 @@ function Home() {
       },
     })
       .then((res) => res.json())
-      .then((data) => setCounts(data.map((item) => item.studentsCount)));
+      .then((data) =>
+        data.map((item) => setCounts({ studentsCount: item.studentsCount }))
+      );
   }, [auth.token]);
 
   const homeData = [
     {
       name: "Students",
       image: students,
-      info: counts,
+      info: counts.studentsCount,
     },
     {
       name: "Lecturers",
@@ -42,11 +46,14 @@ function Home() {
       <Section>
         <h1>Welcome to student's portal</h1>
         <S.FlexDiv>
-          <Card
-            data={homeData}
-            // info={counts && counts.map((item) => item.studentsCount)}
-          />
-          {console.log(homeData)}
+          {homeData && (
+            <Card
+              data={homeData}
+              // info={counts && counts.map((item) => item.studentsCount)}
+            />
+          )}
+
+          {/* {console.log(counts.studentsCount)} */}
         </S.FlexDiv>
       </Section>
     </>
