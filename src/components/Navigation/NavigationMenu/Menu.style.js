@@ -21,6 +21,7 @@ export const UlBlock = styled.ul`
     height: 100vh;
     background-color: #fff;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+    transition: 0.5s;
 
     li {
       width: 100%;
@@ -39,6 +40,7 @@ export const StyledLink = styled(NavLink)`
 
   &:hover {
     background: #01baef;
+    transition: 0.5s ease-in-out;
   }
   span {
     margin-left: 10px;
