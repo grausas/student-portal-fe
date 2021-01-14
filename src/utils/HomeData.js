@@ -4,18 +4,16 @@ import graduate from "../assets/graduate.png";
 
 export const homeData = [
   {
+    id: 1,
     name: "Students",
     image: students,
-    info: "23",
   },
   {
-    name: "Teachers",
+    name: "Lecturers",
     image: teacher,
-    info: "5",
   },
   {
     name: "Graduates",
     image: graduate,
-    info: "20",
   },
 ];
