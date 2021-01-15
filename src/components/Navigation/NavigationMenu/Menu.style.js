@@ -21,7 +21,7 @@ export const UlBlock = styled.ul`
     height: 100vh;
     background-color: #fff;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-    transition: 0.5s;
+    transition: ${({ open }) => (open ? "0.5s" : "0")};
 
     li {
       width: 100%;
