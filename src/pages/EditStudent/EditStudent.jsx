@@ -121,7 +121,6 @@ function EditStudent() {
               }
             />
           </S.InputWrapper>
-
           <S.InputWrapper>
             <InputField
               defaultValue={data.phone}

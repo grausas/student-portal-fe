@@ -36,17 +36,17 @@ function Home() {
     {
       name: "Students",
       image: students,
-      info: counts.studentsCount,
+      info: counts.studentsCount ? counts.studentsCount : "no data",
     },
     {
       name: "Lecturers",
       image: teacher,
-      info: counts.lecturersCount,
+      info: counts.lecturersCount ? counts.lecturersCount : "no data",
     },
     {
       name: "Courses",
       image: graduate,
-      info: counts.coursesCount,
+      info: counts.coursesCount ? counts.coursesCount : "no data",
     },
   ];
 
@@ -54,16 +54,7 @@ function Home() {
     <>
       <Section>
         <h1>Welcome to student's portal</h1>
-        <S.FlexDiv>
-          {homeData && (
-            <Card
-              data={homeData}
-              // info={counts && counts.map((item) => item.studentsCount)}
-            />
-          )}
-
-          {/* {console.log(counts.studentsCount)} */}
-        </S.FlexDiv>
+        <S.FlexDiv>{homeData && <Card data={homeData} />}</S.FlexDiv>
       </Section>
     </>
   );
