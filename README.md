@@ -13,7 +13,7 @@ Demo CRUD project where you can add students, groups and courses.
 
 1.  Clone repo
 ```
-    https://github.com/grausas/student-portal-fe.git
+https://github.com/grausas/student-portal-fe.git
 ```
 2.  Install npm packages
     npm install
