@@ -11,7 +11,7 @@ Demo CRUD project where you can add students, groups and courses.
 
 ## Installation
 
-1.  Clone repo
+1.  Clone repository
 ```
 https://github.com/grausas/student-portal-fe.git
 ```
