@@ -22,13 +22,11 @@ function Home() {
     })
       .then((res) => res.json())
       .then((data) =>
-        data.map((item) =>
-          setCounts({
-            studentsCount: item.studentsCount,
-            lecturersCount: item.lecturersCount,
-            coursesCount: item.coursesCount,
-          })
-        )
+        setCounts({
+          studentsCount: data[0].studentsCount,
+          lecturersCount: data[0].lecturersCount,
+          coursesCount: data[0].coursesCount,
+        })
       );
   }, [auth.token]);
 
