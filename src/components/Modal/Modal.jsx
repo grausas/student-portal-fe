@@ -3,7 +3,6 @@ import * as S from "./Modal.style";
 
 function Modal({ children, title, btnTitle }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(isModalOpen);
 
   const openModal = () => {
     setIsModalOpen(true);
