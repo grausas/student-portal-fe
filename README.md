@@ -9,6 +9,8 @@ Demo CRUD project where you can add students, groups and courses.
 - Styled components - for styling
 - AWS mysql database
 
+Back end repository for this project: https://github.com/grausas/student-portal-be
+
 ## Installation
 
 1.  Clone repository
