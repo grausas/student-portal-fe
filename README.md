@@ -2,7 +2,7 @@
 
 Demo CRUD project where you can add students, groups and courses.
 
-# :hammer: Built With
+## :hammer: Built With
 
 - React.js - front end
 - Node.js - back end
