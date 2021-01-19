@@ -3,6 +3,7 @@ import { Section, InputField, Button, Notification } from "../../components";
 import * as S from "./EditStudent.style";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { Redirect } from "react-router-dom";
 
 function editStudentData(data, auth, setError, setType, error) {
   const id = data.id;
@@ -53,94 +54,104 @@ function EditStudent() {
   });
 
   useEffect(() => {
-    const studentData = location.state.detail;
-    setData({
-      id: studentData.id,
-      name: studentData.fullname.split(" ")[0],
-      surname: studentData.fullname.split(" ")[1],
-      email: studentData.email,
-      phone: studentData.phone.slice(1),
-    });
+    if (location.state !== undefined) {
+      const studentData = location.state.detail;
+      setData({
+        id: studentData.id,
+        name: studentData.fullname.split(" ")[0],
+        surname: studentData.fullname.split(" ")[1],
+        email: studentData.email,
+        phone: studentData.phone.slice(1),
+      });
+    }
   }, [location]);
 
   return (
-    <Section>
-      {error && <Notification type={type}>{error}</Notification>}
-      <h2>Edit Student</h2>
-      <S.FormWrapper>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            editStudentData(data, auth, setError, setType);
-          }}
-        >
-          <S.InputWrapper>
-            <InputField
-              defaultValue={data.name}
-              labelText="Name:"
-              type="text"
-              minLength="2"
-              maxLength="50"
-              IconClassName="fas fa-user"
-              handleChange={(e) =>
-                setData({
-                  ...data,
-                  name: e.target.value.split(" ").join(""),
-                })
-              }
-            />
-          </S.InputWrapper>
-          <S.InputWrapper>
-            <InputField
-              defaultValue={data.surname}
-              labelText="Surname:"
-              type="text"
-              minLength="2"
-              maxLength="50"
-              IconClassName="fas fa-user"
-              handleChange={(e) =>
-                setData({
-                  ...data,
-                  surname: e.target.value.split(" ").join(""),
-                })
-              }
-            />
-          </S.InputWrapper>
-          <S.InputWrapper>
-            <InputField
-              defaultValue={data.email}
-              type="email"
-              labelText="Email:"
-              minLength="6"
-              maxLength="256"
-              handleChange={(e) =>
-                setData({
-                  ...data,
-                  email: e.target.value.split(" ").join(""),
-                })
-              }
-            />
-          </S.InputWrapper>
-          <S.InputWrapper>
-            <InputField
-              defaultValue={data.phone}
-              labelText="Phone:"
-              type="text"
-              minLength="5"
-              maxLength="15"
-              IconClassName="fas fa-phone"
-              handleChange={(e) =>
-                setData({
-                  ...data,
-                  phone: e.target.value.split(" ").join(""),
-                })
-              }
-            />
-          </S.InputWrapper>
-          <Button>Edit Student</Button>
-        </form>
-      </S.FormWrapper>
-    </Section>
+    <>
+      {console.log(location)}
+
+      {location.state !== undefined ? (
+        <Section>
+          {error && <Notification type={type}>{error}</Notification>}
+          <h2>Edit Student</h2>
+          <S.FormWrapper>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                editStudentData(data, auth, setError, setType);
+              }}
+            >
+              <S.InputWrapper>
+                <InputField
+                  defaultValue={data.name}
+                  labelText="Name:"
+                  type="text"
+                  minLength="2"
+                  maxLength="50"
+                  IconClassName="fas fa-user"
+                  handleChange={(e) =>
+                    setData({
+                      ...data,
+                      name: e.target.value.split(" ").join(""),
+                    })
+                  }
+                />
+              </S.InputWrapper>
+              <S.InputWrapper>
+                <InputField
+                  defaultValue={data.surname}
+                  labelText="Surname:"
+                  type="text"
+                  minLength="2"
+                  maxLength="50"
+                  IconClassName="fas fa-user"
+                  handleChange={(e) =>
+                    setData({
+                      ...data,
+                      surname: e.target.value.split(" ").join(""),
+                    })
+                  }
+                />
+              </S.InputWrapper>
+              <S.InputWrapper>
+                <InputField
+                  defaultValue={data.email}
+                  type="email"
+                  labelText="Email:"
+                  minLength="6"
+                  maxLength="256"
+                  handleChange={(e) =>
+                    setData({
+                      ...data,
+                      email: e.target.value.split(" ").join(""),
+                    })
+                  }
+                />
+              </S.InputWrapper>
+              <S.InputWrapper>
+                <InputField
+                  defaultValue={data.phone}
+                  labelText="Phone:"
+                  type="text"
+                  minLength="5"
+                  maxLength="15"
+                  IconClassName="fas fa-phone"
+                  handleChange={(e) =>
+                    setData({
+                      ...data,
+                      phone: e.target.value.split(" ").join(""),
+                    })
+                  }
+                />
+              </S.InputWrapper>
+              <Button>Edit Student</Button>
+            </form>
+          </S.FormWrapper>
+        </Section>
+      ) : (
+        <Redirect to="/students" />
+      )}
+    </>
   );
 }
 
