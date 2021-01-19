@@ -1,8 +1,8 @@
-# Student Portal
+# :mortar_board: Student Portal
 
 Demo CRUD project where you can add students, groups and courses.
 
-# Built With
+# :hammer: Built With
 
 - React.js - front end
 - Node.js - back end
@@ -11,7 +11,7 @@ Demo CRUD project where you can add students, groups and courses.
 
 Back end repository for this project: https://github.com/grausas/student-portal-be
 
-## Installation
+## :computer: Installation
 
 1.  Clone repository
 ```
