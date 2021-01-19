@@ -117,16 +117,16 @@ function InputField({
 
 InputField.propTypes = {
   type: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   labelText: PropTypes.string,
   IconClassName: PropTypes.string,
-  inputId: PropTypes.number,
+  inputId: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  minLength: PropTypes.number,
-  maxLength: PropTypes.number,
+  minLength: PropTypes.string,
+  maxLength: PropTypes.string,
   handleChange: PropTypes.func,
-  options: PropTypes.object.isRequired,
+  options: PropTypes.array,
 };
 
 export default InputField;

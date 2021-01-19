@@ -12,7 +12,7 @@ function Section({ children, fullWidth, background, className }) {
 }
 
 Section.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array,
   fullWidth: PropTypes.bool,
   background: PropTypes.string,
   className: PropTypes.string,

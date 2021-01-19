@@ -22,7 +22,7 @@ function Card({ data }) {
 }
 
 Card.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.array,
 };
 
 export default Card;

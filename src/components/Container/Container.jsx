@@ -7,7 +7,7 @@ function Container({ children }) {
 }
 
 Container.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array,
 };
 
 export default Container;

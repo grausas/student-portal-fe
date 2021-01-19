@@ -49,7 +49,7 @@ Form.propTypes = {
   callback: PropTypes.func.isRequired,
   buttonText: PropTypes.string,
   titleText: PropTypes.string,
-  options: PropTypes.object.isRequired,
+  options: PropTypes.array,
 };
 
 export default Form;

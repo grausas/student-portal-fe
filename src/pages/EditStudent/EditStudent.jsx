@@ -68,8 +68,6 @@ function EditStudent() {
 
   return (
     <>
-      {console.log(location)}
-
       {location.state !== undefined ? (
         <Section>
           {error && <Notification type={type}>{error}</Notification>}

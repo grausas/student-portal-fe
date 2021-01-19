@@ -12,7 +12,7 @@ function Button({ children, handleClick, color, className }) {
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   handleClick: PropTypes.func,
 };
 
