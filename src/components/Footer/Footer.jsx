@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./Footer.style";
 import logo from "../../assets/reading1.svg";
+import PropTypes from "prop-types";
 
 function Footer({ isLoggedIn }) {
   return (
@@ -14,5 +15,9 @@ function Footer({ isLoggedIn }) {
     </>
   );
 }
+
+Footer.propTypes = {
+  isLoggedIn: PropTypes.bool,
+};
 
 export default Footer;

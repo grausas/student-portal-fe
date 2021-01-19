@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Card.style";
+import PropTypes from "prop-types";
 
 function Card({ data }) {
   return (
@@ -19,5 +20,9 @@ function Card({ data }) {
     </>
   );
 }
+
+Card.propTypes = {
+  data: PropTypes.object,
+};
 
 export default Card;

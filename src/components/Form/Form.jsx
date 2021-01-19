@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputField, Button } from "../index";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import * as S from "./Form.style";
 
 function Form({ fields, callback, buttonText, titleText, options }) {
@@ -45,8 +45,11 @@ function Form({ fields, callback, buttonText, titleText, options }) {
 }
 
 Form.propTypes = {
-  fields: PropType.array,
-  callback: PropType.func,
+  fields: PropTypes.array.isRequired,
+  callback: PropTypes.func.isRequired,
+  buttonText: PropTypes.string,
+  titleText: PropTypes.string,
+  options: PropTypes.object.isRequired,
 };
 
 export default Form;

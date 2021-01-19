@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./InputField.style";
+import PropTypes from "prop-types";
 
 function InputField({
   type,
@@ -113,5 +114,19 @@ function InputField({
       );
   }
 }
+
+InputField.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  labelText: PropTypes.string,
+  IconClassName: PropTypes.string,
+  inputId: PropTypes.number,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
+  handleChange: PropTypes.func,
+  options: PropTypes.object.isRequired,
+};
 
 export default InputField;

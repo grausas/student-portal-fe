@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Redirect } from "react-router-dom";
 import jwtDecode from "jwt-decode";
+import PropTypes from "prop-types";
 
 const PrivateRoute = ({ path, component }) => {
   const [isAuth, setIsAuth] = useState(null);
@@ -29,6 +30,11 @@ const PrivateRoute = ({ path, component }) => {
   } else {
     return <Redirect to={{ pathname: "/login" }} />;
   }
+};
+
+PrivateRoute.propTypes = {
+  path: PropTypes.string.isRequired,
+  component: PropTypes.object.isRequired,
 };
 
 export default PrivateRoute;
