@@ -7,6 +7,10 @@ export const TableBox = styled.div`
   box-sizing: border-box;
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
 
+  @media only screen and (max-width: 1180px) {
+    font-size: 0.9em;
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 1em 0.3em;
     font-size: 0.8em;

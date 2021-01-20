@@ -5,6 +5,11 @@ export const Section = styled.section`
   width: 100%;
   padding: 3em 1em;
   margin-left: 220px;
+
+  @media (max-width: 1180px) {
+    margin-left: 180px;
+  }
+
   @media only screen and (max-width: 768px) {
     margin-left: 0;
   }

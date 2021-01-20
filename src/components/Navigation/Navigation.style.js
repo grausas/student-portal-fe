@@ -8,6 +8,10 @@ export const Navigation = styled.nav`
   padding-top: 60px;
   background-color: #fff;
 
+  @media (max-width: 1180px) {
+    width: 180px;
+  }
+
   @media (max-width: 768px) {
     width: 0;
     height: 0;
